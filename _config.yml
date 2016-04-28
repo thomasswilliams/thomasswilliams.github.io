@@ -1,0 +1,24 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: thomasswilliams Blog
+email: 
+description: > # this means to ignore newlines until "baseurl:"
+  Thomas Williams blog from Melbourne, Australia. Tech and life. Previously at Blogger and TheRuntime.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://thomasswilliams.github.io" # the base hostname & protocol for your site
+# links referenced in footer
+twitter_username: tswilliams4
+github_username:  thomasswilliams
+flickr_username: thomasswilliams
+# Stack Exchange user is in two parts 
+stack_username_full: 116288/thomasswilliams
+stack_username: thomasswilliams
+
+# Build settings
+markdown: kramdown

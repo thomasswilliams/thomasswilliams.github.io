@@ -1,0 +1,48 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="footer-list">
+          <li>no analytics</li>
+          <li>no ads</li>
+          <li>no trackers</li>
+          <li>no comments (Tweet me!)</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.stack_username_full %}
+          <li>
+            {% include icon-stack.html username_full=site.stack_username_full username=site.stack_username %}
+          </li>
+          {% endif %}
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+          {% if site.flickr_username %}
+          <li>
+            {% include icon-flickr.html username=site.flickr_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+        <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /> All work CC licensed.</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
