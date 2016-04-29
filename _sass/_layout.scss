@@ -18,8 +18,8 @@
     margin-bottom: 0;
     float: left;
     font-family: Raleway, $base-font-family;
-    &,
-    &:visited {
+    transition: color 0.3s;
+    &, &:visited {
         color: $title-color;
     }
 }
@@ -192,11 +192,11 @@
 .post-link {
     display: block;
     font-size: 24px;
-  
+    transition: color 0.3s;
+    
     &:hover {
         background-color: transparent;
     } 
-  
 }
 
 
