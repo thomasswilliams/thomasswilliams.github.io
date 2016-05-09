@@ -1,248 +1,132 @@
-/**
- * Site header
- */
-.site-header {
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 48px;
-    background-color: #ecf0f1;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
+// sidebar 
+aside {
+  // width will be reduced based on media breakpoints 
+  width: 23%;
+  // fixed at left-hand side of screen 
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; 
+  background-color: $brand-color;
 }
-
-.site-title {
-    font-size: 32px;
-    font-weight: 300;
-    line-height: 48px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-    font-family: Raleway, $base-font-family;
-    transition: color 0.3s;
-    &, &:visited {
-        color: $title-color;
-    }
+// header in sidebar
+// note headers are used elsewhere in the site
+aside > header {
+  text-align: center;
+  margin: auto;
 }
-
-.site-nav {
-    float: right;
-    line-height: 48px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
+// site heading 
+aside > header h1 {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: -1px;
+  color: $background-color;
 }
-
-
-
-/**
- * Site footer
- */
-.site-footer {
-    padding: $spacing-unit 0;
+// links in header have different color, no hover effect 
+aside > header a, aside > header a:visited, aside > header a:hover, aside > header a:active {
+  color: $background-color;
+  background-color: transparent;
+  text-decoration: none;
 }
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+// social links need extra spacing
+aside > header ul li { 
+  line-height: 3em;
 }
-
-.contact-list,
-.social-media-list,
-.footer-list {
-    list-style: none;
-    margin-left: 0;
+// social Font Awesome links in header
+aside > header i.fa { 
+  vertical-align: sub;
 }
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-    width:         calc(25% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-    width:         calc(40% - (#{$spacing-unit} / 2));
-}
-
+// for narrower layouts, make aside narrower 
 @include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
+  aside {
+    width: 100px;
+  }
+  // hide the site heading
+  aside > header h1 { 
+    display: none;
+  }
+  // make avatar image smaller 
+  aside > header img[alt="thomasswilliams"] { 
+    width: 90px;
+    height: 90px;
+    // add bottom padding
+    margin-bottom: 3em;
+  }
+  // hide sitenames in social links 
+  .username {
+    display: none;
+  }
 }
 
+// main content wrapper
+main {
+  position: absolute;
+  right: 0;
+  min-height: 100%;
+  // width = 100% minus width of aside
+  width: 74%;
+  padding: 20px;
+}
+// when too narrow, make main content wrapper = width - aside width
+@include media-query($on-laptop) {
+  main {
+    width: 85%; // fallback if needed 
+    width: -webkit-calc(100% - 135px);
+    width: calc(100% - 135px);
+  }
+}
+// site footer, contained within main content wrapper  
+footer { 
+  padding: $spacing-unit 0;
+  color: $grey-color-dark;
+  font-size: $small-font-size;
+}
+
+// columns in footer
+footer > div.col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: 0;
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width: calc(50% - (#{$spacing-unit} / 2));
+}
+
+// lists in header and footer
+footer div.col ul, header ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+// for narrower layouts, make footer cols full width
 @include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
+  footer > div.col {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
+  }
 }
 
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
+// post list 
+ul.posts { 
+  list-style: none;
+  margin-left: 0;
 }
-
-.page-heading {
-    font-size: 20px;
+// links to posts in post list 
+ul.posts h2 { 
+  // remove space after
+  margin-bottom: 0;
+  // add space before
+  margin-top: 15px;
 }
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+// post headings 
+h2[itemprop~="headline"] { 
+  font-size: 2.5em;
+  color: $brand-color;
+  margin-bottom: 0;
 }
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-    transition: color 0.3s;
-    
-    &:hover {
-        background-color: transparent;
-    } 
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-    margin-bottom: 0;
-    
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+// post dates 
+time[itemprop="datePublished"], ul.posts time { 
+  color: $grey-color;
+  font-size: $small-font-size;
 }
