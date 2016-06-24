@@ -1,12 +1,12 @@
-// sidebar 
+// sidebar
 aside {
-  // width will be reduced based on media breakpoints 
+  // width will be reduced based on media breakpoints
   width: 23%;
-  // fixed at left-hand side of screen 
+  // fixed at left-hand side of screen
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%; 
+  height: 100%;
   background-color: $brand-color;
 }
 // header in sidebar
@@ -15,7 +15,7 @@ aside > header {
   text-align: center;
   margin: auto;
 }
-// site heading 
+// site heading
 aside > header h1 {
   font-size: 32px;
   font-weight: 300;
@@ -23,37 +23,38 @@ aside > header h1 {
   letter-spacing: -1px;
   color: $background-color;
 }
-// links in header have different color, no hover effect 
+// links in header have different color, no hover effect
 aside > header a, aside > header a:visited, aside > header a:hover, aside > header a:active {
   color: $background-color;
   background-color: transparent;
   text-decoration: none;
 }
 // social links need extra spacing
-aside > header ul li { 
+aside > header ul li {
   line-height: 3em;
 }
 // social Font Awesome links in header
-aside > header i.fa { 
+aside > header i.fa {
   vertical-align: sub;
 }
-// for narrower layouts, make aside narrower 
+
+// for narrower layouts, make aside narrower
 @include media-query($on-laptop) {
   aside {
     width: 100px;
   }
   // hide the site heading
-  aside > header h1 { 
+  aside > header h1 {
     display: none;
   }
-  // make avatar image smaller 
-  aside > header img[alt="thomasswilliams"] { 
+  // make avatar image smaller
+  aside > header img[alt="thomasswilliams"] {
     width: 90px;
     height: 90px;
     // add bottom padding
     margin-bottom: 3em;
   }
-  // hide sitenames in social links 
+  // hide sitenames in social links
   .username {
     display: none;
   }
@@ -68,16 +69,17 @@ main {
   width: 74%;
   padding: 20px;
 }
+
 // when too narrow, make main content wrapper = width - aside width
 @include media-query($on-laptop) {
   main {
-    width: 85%; // fallback if needed 
+    width: 85%; // fallback if needed
     width: -webkit-calc(100% - 135px);
     width: calc(100% - 135px);
   }
 }
-// site footer, contained within main content wrapper  
-footer { 
+// site footer, contained within main content wrapper
+footer {
   padding: $spacing-unit 0;
   color: $grey-color-dark;
   font-size: $small-font-size;
@@ -107,26 +109,26 @@ footer div.col ul, header ul {
   }
 }
 
-// post list 
-ul.posts { 
+// post list
+ul.posts {
   list-style: none;
   margin-left: 0;
 }
-// links to posts in post list 
-ul.posts h2 { 
+// links to posts in post list
+ul.posts h2 {
   // remove space after
   margin-bottom: 0;
   // add space before
   margin-top: 15px;
 }
-// post headings 
-h2[itemprop~="headline"] { 
+// post headings
+h2[itemprop~="headline"] {
   font-size: 2.5em;
   color: $brand-color;
   margin-bottom: 0;
 }
-// post dates 
-time[itemprop="datePublished"], ul.posts time { 
+// post dates
+time[itemprop="datePublished"], ul.posts time {
   color: $grey-color;
   font-size: $small-font-size;
 }

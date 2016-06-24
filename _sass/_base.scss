@@ -6,10 +6,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-html { 
-    
-}
-
 // basic body styling
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
@@ -37,32 +33,30 @@ img {
   vertical-align: middle;
 }
 
-// lists 
+// lists
 ul, ol {
   margin-left: $spacing-unit;
 }
 li {
   > ul,
   > ol {
-   margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
-// headings 
+// headings
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font, $base-font-family;
   font-weight: $base-font-weight;
 }
 
-// links 
+// links
 a {
   color: $brand-color;
   text-decoration: none;
-
   &:visited {
     color: darken($brand-color, 15%);
   }
-
   &:hover {
     color: darken($brand-color, 25%);
     background-color: darken($background-color, 5%);
@@ -70,7 +64,7 @@ a {
   }
 }
 
-// quotes 
+// quotes
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
@@ -78,13 +72,12 @@ blockquote {
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic;
-
   > :last-child {
     margin-bottom: 0;
   }
 }
 
-// code 
+// code
 pre,
 code {
   font-family: $fix-font-family;
@@ -98,22 +91,21 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
-  // allow to wrap in a responsive way 
+  // allow to wrap in a responsive way
   // from http://nicolashery.com/fast-mobile-friendly-website-with-jekyll/
   white-space: pre-wrap;
-
   > code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-    background-color: #eef;
+    background-color: #eeeeff;
     max-width: 500px;
   }
 }
 
-// clearfix 
+// clearfix
 %clearfix {
- &:after {
+  &::after {
     content: "";
     display: table;
     clear: both;
