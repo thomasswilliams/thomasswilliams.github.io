@@ -2,7 +2,7 @@
 layout: post
 title:  "Starting with Jekyll"
 date:   2016-04-27 20:34:45 +1000
-categories: jekyll meta
+categories: 
 ---
 I'm using Jekyll as the blog engine on this site.
 

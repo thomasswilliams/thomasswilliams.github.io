@@ -2,7 +2,7 @@
 layout: post
 title:  "Logging with NLog in PowerShell"
 date:   2016-04-29 13:28:00 +1000
-categories: net code
+categories: 
 ---
 PowerShell has simple logging built in:
 
@@ -11,9 +11,9 @@ Write-Debug "This will be output to the console if `$DebugPreference = `"Continu
 
 Echo "This will be output to the console and can be piped to Out-File (remember to use -append)"
 ```
- 
+
 Sometimes more complex logging is needed - for instance, [NLog][1], a proven and well-documented .NET library that can log to file or the Windows event log/e-mail/database as needed, controlled by a flexible XML config file.
- 
+
 I got NLog working in a PowerShell script. Here's how:
 
 * download NLog e.g. from NuGet <https://www.nuget.org/packages/NLog>
@@ -24,12 +24,12 @@ I got NLog working in a PowerShell script. Here's how:
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       autoReload="true">
   <targets async="true">
     <!-- text file - absolute directory e.g. not using "basedir" variable -->
-    <target name="logfile" 
-            xsi:type="File" 
+    <target name="logfile"
+            xsi:type="File"
             fileName="<YOUR DIRECTORY NAME HERE>\logfile.txt"
             layout="${longdate}|${message} ${exception:format=tostring}"/>
   </targets>
@@ -52,7 +52,7 @@ $scriptPath = Split-Path $scriptPath
 # ignore version and location output from LoadFile
 [Reflection.Assembly]::LoadFile("$scriptPath\NLog.dll") | Out-Null
 
-# load NLog config file 
+# load NLog config file
 # note all logging targets in NLog config file need to be absolute (not relative) paths
 $ne = New-Object NLog.Config.XmlLoggingConfiguration("$scriptPath\NLog.config")
 # assign config file
