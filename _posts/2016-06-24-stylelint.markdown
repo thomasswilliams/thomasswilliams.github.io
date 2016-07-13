@@ -10,7 +10,7 @@ Stylelint <http://stylelint.io/> is a free code analysis tool that “lints” C
 
 A quick search in CSS code on GitHub for misspelled properties shows how Stylint could help: “backgrond”, “margin-botom”, “dipslay” and “pading-top” appear hundreds of times…better go check my repositories!
 
-There’s plenty of great articles on incorporating Stylelint into a build process and rules to get you started, for instance:
+There’s plenty of great articles on incorporating Stylelint into a build process and rules to get you started:
 
 * Facebook <https://code.facebook.com/posts/879890885467584/improving-css-quality-at-facebook-and-beyond/>
 * Smashing Magazine <https://www.smashingmagazine.com/2016/05/stylelint-the-style-sheet-linter-weve-always-wanted/>
