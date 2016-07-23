@@ -2,7 +2,7 @@
 layout: post
 title:  "Logging with NLog in PowerShell"
 date:   2016-04-29 13:28:00 +1000
-categories: 
+categories:
 ---
 PowerShell has simple logging built in:
 
@@ -13,6 +13,11 @@ Echo "This will be output to the console and can be piped to Out-File (remember 
 ```
 
 Sometimes more complex logging is needed - for instance, [NLog][1], a proven and well-documented .NET library that can log to file or the Windows event log/e-mail/database as needed, controlled by a flexible XML config file.
+
+<div markdown="1" class="note">
+**Thomas's "but it worked for me" disclaimer:** before using any code you find on the internet, especially on this blog, take time to understand what the code does and test, test, test. I'm not responsible for damage caused by code from this blog, and don't offer any support or warranty.
+</div>
+<br/>
 
 I got NLog working in a PowerShell script. Here's how:
 

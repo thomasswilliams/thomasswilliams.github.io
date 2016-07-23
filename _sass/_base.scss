@@ -98,9 +98,17 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-    background-color: #eeeeff;
     max-width: 500px;
   }
+}
+
+// note/highlight
+.note {
+  position: relative;
+  padding: 10px 10px 0;
+  border: 1px solid #ffca28;
+  background-color: #ffd54f;
+  border-radius: 4px;
 }
 
 // clearfix
@@ -109,5 +117,34 @@ pre {
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+// code blocks that use Liquid highlight code
+figure.highlight {
+  border-left: 6px solid #eeeeff;
+}
+// Visual Basic approximate syntax highlighting in Liquid highlight code blocks
+.highlight .language-vb {
+  // comments
+  & .c1 {
+    color: #129804;
+  }
+  // "region"
+  & .cp {
+    color: #e22e2e;
+  }
+  & .k {
+    color: #0c1da9;
+  }
+  & .nc, & .nv, & .nn {
+    color: #222223;
+  }
+  // strings
+  & .s {
+    color: #821a3a;
+  }
+  & .n, & .kt {
+    color: #268bd2;
   }
 }
