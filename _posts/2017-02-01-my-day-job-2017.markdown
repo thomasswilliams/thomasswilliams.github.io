@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "My day job (2017)"
+date:   2017-01-02 17:46:00 +1000
+categories:
+---
+For the last 6 years I've worked in the IT department of a hospital, with 3 main responsibilities:
+
+- Database Administrator (DBA)
+- application support and development
+- Change Manager (as of mid-2016)
+
+On a typical day, I:
+
+- monitor systems for faults
+- check the help desk system for issues logged by users
+- fix stuff (yay!)
+- do project work e.g. planning, implementation, testing of new systems, or upgrades to existing systems
+- consult and advise in my areas of expertise
+- work to improve systems
+- go to meetings...OK, not my favorite
+- document stuff
+- help users kick a** at their jobs *(wording thanks to Kathy Sierra’s blog and [fantastic book "Badass: Making Users Awesome”][1])*
+
+On that last point - I used to think that if IT could just be great, users would listen to us, management would appreciate us, and the world would be rosy.
+
+A couple of things helped me re-focus and understand that IT really shines as we solve users' real problems and help __them__ be awesome at their jobs: admitting who "the talent" at any hospital is (hint: not IT), getting out of the office and alongside users, and studying ITIL which opened my eyes to the broader picture in business and IT - more than just my code.
+
+*(A couple of other user-centric books are [Steve Krug’s “Don’t Make Me Think”][2], [37signals’ “Defensive Design for the Web"][3], and [Don Norman's classic "The Design of Everyday Things"][4])*
+
+[1]: https://www.amazon.com/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019
+[2]: https://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758
+[3]: https://www.amazon.com/Defensive-Design-Web-improve-messages/dp/073571410X
+[4]: https://www.amazon.com/The-Design-Everyday-Things-Expanded/dp/0465050654
