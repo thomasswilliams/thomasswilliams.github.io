@@ -10,6 +10,9 @@ For the last 6 years I've worked in the IT department of a hospital, with 3 main
 - application support and development
 - Change Manager (as of mid-2016)
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Meet Thomas from <a href="https://twitter.com/hashtag/IT?src=hash">#IT</a>. He has a very important role in our health service, looking after all of our data: <a href="https://t.co/LysOa1HXy1">https://t.co/LysOa1HXy1</a> <a href="https://t.co/BegNH4hOMq">pic.twitter.com/BegNH4hOMq</a></p>&mdash; Peninsula Health (@PeninsulaHealth) <a href="https://twitter.com/PeninsulaHealth/status/834608741626556416">February 23, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 On a typical day, I:
 
 - monitor systems for faults
