@@ -4,9 +4,14 @@ title:  "Useful Chrome browser plugins, April 2016"
 date:   2016-04-28 19:28:00 +1000
 categories: 
 ---
+<div markdown="1" class="note">
+**Thomas's "this post is really out of date" warning:** this post is old. Some of the recommendations here no longer apply or are now plain wrong. I'm not responsible for damage caused by your following advice from this blog, and don't offer any support or warranty.
+</div>
+<br/>
+
 In my day job as a departmental IT worker I do a lot of stuff, from database design and queries, to server-side code in a variety of languages, to front-end design and development. I also browse the web - a lot - and look after IT at home.
 
-With that in mind, I'd like to highlight  a couple of Chrome plugins I use regularly:
+With that in mind, I'd like to highlight a couple of Chrome plugins I use regularly:
 
 ### [HTTPS Everywhere][2]
 Uses https instead of http on sites that support it.

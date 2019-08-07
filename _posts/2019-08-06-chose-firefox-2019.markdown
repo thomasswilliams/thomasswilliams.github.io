@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Why I chose the Firefox browser in 2019"
+date:   2019-08-07 20:43:00 +1000
+categories: 
+---
+Control over what I see and what others know about me - ad-blocking and privacy - are high on my list of desired features for a browser. They're also why I'd recommend a browser to friends and family. Chrome was my go-to browser but recent moves by Google (for instance, [here][1] and [here][2]) encouraged me a chance to look around at other options.
+ 
+I chose the Firefox browser in 2019 because of [their belief in privacy][3], positive past experience, ad-blocking, and options for computer, tablet and phone.
+ 
+Moving from Chrome was simple - install Firefox, set up a Firefox Account, install extensions (LastPass, Privacy Badger, uBlock Origin, Auto Tab Discard, Gesturefy, Glitter Drag and Greasemonkey), log out of Chrome on all devices.
+ 
+Do I miss Chrome? I'm getting used to the Firefox user interface and web development tools, but there's nothing so far that *requires* Chrome. I still use Google web sites like Google Search & Youtube and it's helpful to have an alternative browser installed "just in case".
+
+Related: [Useful Chrome browser plugins, April 2016]({% post_url 2016-04-28-chrome-plugins-april-2016 %})
+
+[1]: https://www.forbes.com/sites/kateoflahertyuk/2019/05/30/google-just-gave-2-billion-chrome-users-a-reason-to-switch-to-firefox
+[2]: https://github.com/uBlockOrigin/uBlock-issues/issues/338
+[3]: https://www.mozilla.org/en-US/privacy/firefox/
