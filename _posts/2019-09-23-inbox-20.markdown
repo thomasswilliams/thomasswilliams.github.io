@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "How I use 'Inbox Zero' ('Inbox 20'?)"
+date:   2019-09-23 19:00:00 +1000
+categories:
+---
+
+I’m happy to try a tool or technique to help filter out “noise”, reduce overload, and allow me to focus on the important stuff at work. Around 5 years ago I came across “Inbox Zero” which fits the above criteria. In this blog post, I'll describe how I've tailored it to suit me.
+
+First up, I admit I’ve never hit zero e-mails in my inbox. I’m regularly down to a manageable number though; perhaps I should call my process “Inbox 20” as getting to 20 or fewer e-mails in my inbox makes me happy.
+
+“Inbox 20” is all about making decisions at the time of skimming or reading new e-mails. After years of making these decisions daily, I find it adds very little overhead - to the point where I could not imagine going back to having no system.
+
+I adapted my decisions below from advice I saw on the internet - I’ve included a couple of references at the end of this blog post.
+
+### Decision 1: does the e-mail require an immediate response from me?
+
+- if so, respond now
+- prefer “Reply all” over “Reply” for openness & transparency
+- if my response runs longer than 5 sentences, a phone conversation may be preferable (I can always still follow up with an e-mail summarising the phone call if necessary)
+- __important: once I’ve responded, I move the e-mail out of the inbox__ - file in a folder or perhaps delete the e-mail
+
+### Decision 2: does the e-mail require _any_ response from me?
+
+- am I a “To” recipient?
+- is the e-mail conversation something I can contribute to - and is it valuable that all recipients hear it from me?
+- is it important info that I need to acknowledge I’ve read, or direct the sender to the correct recipient?
+  - pro tip gleaned over the years: a response of “Noted, thanks” can be enough, especially if the e-mail is from my bosses or other higher level
+- if the response will take less than a couple of minutes - do it now
+- my 5 sentence guideline still applies
+- __once dealt with, file or delete the e-mail__
+- if I’m in doubt about my response, or I need thinking time, or the e-mail is not urgent: I’ll come back to later - leave in inbox for now
+
+### Decision 3: what do I do with e-mail not dealt with by the first 2 decisions?
+
+- 3 options: keep (file in a folder) with no response, keep (do nothing for now, leave in inbox) for later, or delete
+- a little more subjective than the first 2 decisions
+- is it from my bosses - keep
+- is it related to me or my team’s work - keep
+- might I refer to the e-mail later - keep
+- did I already respond - file (done at decision 1 or 2)
+- is this a second or third review of e-mails I’ve previously kept - may be able to file or delete as the topic is finished or no longer relevant
+- if in doubt, leave in inbox…for now
+
+Some categories of e-mail _never_ require a response - for these e-mails, I suggest using inbox rules to file/delete without reading to reduce “noise”.
+
+Note I only check my inbox from time to time during the day as I strongly believe e-mail should not torpedo my productivity (I get around 60 e-mails a day but thanks to inbox rules only read about 20).
+
+The final thing I want to mention is that my “Inbox 20” took effort to set up. Going back 5 years, my inbox had 100’s of e-mails, despite my habit of filing in folders. Why? Mainly because I used e-mails as defacto TODO list which is horrible as new stuff keeps bumping older e-mails. I started by mass deleting e-mails (grouping by the sender helped). Next, I skimmed each e-mail and made decisions; if an e-mail was time-sensitive and overdue, I responded to say I was looking at it.
+
+Hopefully, this blog post is of some help if you’re facing e-mail overload. Good luck!
+
+#### References:
+ 
+- <https://www.lifehacker.com.au/2013/02/how-i-went-from-1000-emails-to-inbox-zero-with-mailstrom/>
+-  <https://www.themuse.com/advice/your-stepbystep-guide-to-reaching-inbox-zero-even-if-you-currently-have-1000-unread-emails>
+- <https://flow-e.com/inbox-zero/gmail/>
