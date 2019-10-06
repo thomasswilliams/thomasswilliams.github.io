@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "My work values"
+date:   2019-10-06 20:00:00 +1000
+categories:
+---
+
+I've worked a couple of jobs - shop assistant up to assistant manager at a hardware store over 8 years, summer jobs while studying at uni, consultant straight out of uni, then in public healthcare; first as a business analyst for 9 years and, for the past 9 years, in IT ([I blogged about my role in IT 3 years ago here]({% post_url 2017-02-01-my-day-job-2017 %})).
+
+From all these jobs, working under lots of leaders, I've learnt it's not always possible to control the "what" and "when" of work.
+
+However, the "how" is something I have a say in. I've built up a good idea of how I work best, my strengths and styles, and what others who work with me can expect from me.
+
+Underlying this, it helps to be clear on what my job is: I see my job as __understanding the business (public healthcare), and solving problems__. For the business to be excellent, staff need to be excellent at their jobs - and I help them do that.
+
+My values:
+
+- I'm open-minded and believe good ideas can come from anyone
+- I practice clear and direct communication; I model and value transparency and sharing of knowledge
+- I have respect for people - their time, their knowledge & opinions
+- I strongly believe in being available & accessible
+- I frequently use data and evidence to support open, blame-free discussions
+- I focus on outcomes - and understand there's many ways of getting to a great outcome
+- I take responsibility for my tasks, processes, outcomes
+
+Further resources:
+
+- [Principles: Life and Work][1]
+- [Managing Humans: Biting and Humorous Tales of a Software Engineering Manager][2]
+- [Time Management for System Administrators: Stop Working Late and Start Working Smart][3]
+- [Site Reliability Engineering][4]
+- [The Site Reliability Workbook: Practical ways to implement SRE][5]
+- [Business Chemistry: Practical Magic for Crafting Powerful Work Relationships][6]
+
+[1]: https://www.amazon.com.au/gp/product/1501124021/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=thomasswillia-22&creative=1211&linkCode=as2&creativeASIN=1501124021&linkId=d62b8b74f5eff3029e9ab7b0dd7bdfa3
+[2]: https://www.amazon.com.au/gp/product/B01J53IE1O/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=thomasswillia-22&creative=1211&linkCode=as2&creativeASIN=B01J53IE1O&linkId=e2c6383f01aecf32916499e8d0a69184
+[3]: https://www.amazon.com.au/gp/product/B0026OR2WM/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=thomasswillia-22&creative=1211&linkCode=as2&creativeASIN=B0026OR2WM&linkId=bbe666baaaaffd88d012811de5bb85f2
+[4]: https://www.amazon.com.au/gp/product/149192912X/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=thomasswillia-22&creative=1211&linkCode=as2&creativeASIN=149192912X&linkId=541a27978c63ce035c2f08fd425c16d4
+[5]: https://www.amazon.com.au/gp/product/1492029505/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=thomasswillia-22&creative=1211&linkCode=as2&creativeASIN=1492029505&linkId=80853799df0a5261c36b578f9366096d
+[6]: https://www.amazon.com.au/gp/product/1119501563/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=thomasswillia-22&creative=1211&linkCode=as2&creativeASIN=1119501563&linkId=04a8867309b07f8ddc5e3dc77e409d27
