@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "UniFi home network update 2020"
+date:   2020-03-19 22:00:00 +1100
+categories:
+---
+It's been 2 years since I upgraded from an ISP-supplied modem and Apple Airport Extreme to a Ubiquiti UniFi home network ([see my original post "My home network upgrade to Ubiquiti UniFi"]({% post_url 2017-02-13-my-home-network-2016 %})).
+
+Since installing the security gateway, an 8-port managed switch, Cloud Key for management, and a single AC-Pro access point, I've added a second 8-port managed switch for the TV and gaming consoles to move from wi-fi to wired. On reflection the managed switch is probably overkill...but I'm addicted to stats on the UniFi dashboard!
+
+I'm almost ready to add a second access point, located near the second switch. The nanoHD looks about right - newer than the AC-Pro, supports more concurrent clients, and roughly the same price I paid for the AC-Pro.
+
+Other random observations:
+
+- The Cloud Key (V1) occasionally doesn't boot, requiring a restore from backup (taken automatically, nightly). The impact is minimal - the network continues to function, I just can't look at my beloved stats or make any changes to the network.
+- Compared to my screenshots from 2017, the UniFi dashboard has been through several cosmetic and functional iterations and improvements over the years. Good to see Ubiquiti are still actively developing.
+- I recently set up a dedicated IoT VLAN and a separate 2.4GHz wireless network to help me manage IoT things like Hue lights, WeMo switches, a bluetooth bathroom scale and other "legacy" devices (one recent, not-to-be-named IoT purchase only supports 2.4GHz networks, silently failing when I tried to connect to a 5GHz...). The config side of things, using the UniFi dashboard, was very easy.
+- In late 2019 my ISP moved me to the NBN. The transition was painless - I didn't touch the UniFi gear, just replaced the new ISP modem and disabled its in-built wi-fi network.
+- Lastly, I've still got the trusty Apple Airport - it's currently doing Time Machine backups, with wireless networking turned off.
