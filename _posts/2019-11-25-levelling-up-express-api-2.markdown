@@ -74,11 +74,11 @@ import apicache from 'apicache';
 
 // configure caching, needs to be applied to routes
 // will add HTTP headers "apicache-store", "apicache-version"
-const cache = apicache.middleware('2 minutes');
+const cache = apicache.middleware('5 minutes');
 
 // route: get pedals collection
 // cache this route for 5 minutes
-app.get("/pedals", cache('5 minutes'), (req, res) => {
+app.get("/pedals", cache, (req, res) => {
   console.log("Got pedals collection");
   // hard-code JSON response
   res.send({ pedals: [{ name: "Boss SY-1", id: 1 }] });
