@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" crossorigin="anonymous">
   <!-- local styles -->
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | append: '?' | append: site.time | date_to_xmlschema }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | append: '?' }}{{ site.time | date_to_xmlschema }}">
   <!-- Atom feed -->
   <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="/atom.xml" />
 
