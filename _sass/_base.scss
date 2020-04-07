@@ -43,6 +43,10 @@ li {
     margin-bottom: 0;
   }
 }
+// paragraphs in lists, slightly reduced bottom padding
+li > p {
+  margin-bottom: $spacing-unit / 4;
+}
 
 // headings
 h1, h2, h3, h4, h5, h6 {
