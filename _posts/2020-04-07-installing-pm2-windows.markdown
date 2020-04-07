@@ -4,7 +4,6 @@ title:  "Notes to self: installing PM2 on Windows, as a service"
 date:   2020-04-07 17:20:00 +1000
 categories:
 ---
-
 [PM2](https://pm2.keymetrics.io/) is "...a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks...".
 
 I use PM2 to run and monitor Express apps. Below is a quick list of steps I follow to install PM2 (version 4.2.3 at time of writing) on Windows and run as a Windows service, tested on Windows Server 2016.
@@ -35,14 +34,14 @@ Implied is my "works for me" disclaimer at the bottom of this post - these steps
 
 11. from a command prompt, run `pm2-service-install -n PM2`, and answer questions as below:
 
-```bash
-? Perform environment setup (recommended)? Yes
-? Set PM2_HOME? Yes
-? PM2_HOME value (this path should be accessible to the service user and should not contain any “user-context” variables [e.g. %APPDATA%]): C:\pm2
-? Set PM2_SERVICE_SCRIPTS (the list of start-up scripts for pm2)? No
-? Set PM2_SERVICE_PM2_DIR (the location of the global pm2 to use with the service)? [recommended] Yes
-? Specify the directory containing the pm2 version to be used by the service C:\USERS\<USER>\APPDATA\ROAMING\NPM\node_modules\pm2\index.js
-```
+    ```bash
+    ? Perform environment setup (recommended)? Yes
+    ? Set PM2_HOME? Yes
+    ? PM2_HOME value (this path should be accessible to the service user and should not contain any “user-context” variables [e.g. %APPDATA%]): C:\pm2
+    ? Set PM2_SERVICE_SCRIPTS (the list of start-up scripts for pm2)? No
+    ? Set PM2_SERVICE_PM2_DIR (the location of the global pm2 to use with the service)? [recommended] Yes
+    ? Specify the directory containing the pm2 version to be used by the service C:\USERS\<USER>\APPDATA\ROAMING\NPM\node_modules\pm2\index.js
+    ```
 
 12. a Windows service called "PM2" should now be configured and can be managed & started using Services Manager
 
