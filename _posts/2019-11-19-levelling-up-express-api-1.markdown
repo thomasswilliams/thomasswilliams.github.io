@@ -67,4 +67,4 @@ Lastly (for part 1), good tests will provide confidence when updating or adding 
 
 I can suggest a couple of great resources for adding tests to Express, at <https://blog.jscrambler.com/testing-apis-mocha-2/>, <https://hackernoon.com/testing-node-js-in-2018-10a04dd77391>, and <https://medium.com/@jodylecompte/express-routes-a-tdd-approach-1e12a0799352>.
 
-That's all for part 1 - in part 2, I'll cover a few easy, practical techniques to further production-ready an Express API.
+That's all for part 1 - in [part 2]({% post_url 2019-11-25-levelling-up-express-api-2 %}), I'll cover a few easy, practical techniques to further production-ready an Express API.

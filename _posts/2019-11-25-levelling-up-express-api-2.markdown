@@ -85,4 +85,4 @@ app.get("/pedals", cache, (req, res) => {
 });
 ```
 
-That wraps up part 2 - in part 3, I'll return to my sample guitar pedals API and add a couple more production-ready touches to my Express API.
+That wraps up part 2 - in [part 3]({% post_url 2020-04-20-levelling-up-express-api-3 %}), I'll return to my sample guitar pedals API and add a couple more production-ready touches to my Express API.
