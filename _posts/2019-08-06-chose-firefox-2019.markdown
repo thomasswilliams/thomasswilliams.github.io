@@ -2,7 +2,7 @@
 layout: post
 title:  "Why I chose the Firefox browser in 2019"
 date:   2019-08-07 20:43:00 +1000
-categories: 
+categories: general
 ---
 Control over what I see and what others know about me - ad-blocking and privacy - are high on my list of desired features for a browser. They're also why I'd recommend a browser to friends and family. Chrome was my go-to browser but recent moves by Google (for instance, [here][1] and [here][2]) encouraged me a chance to look around at other options.
  

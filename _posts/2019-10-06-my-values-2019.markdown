@@ -2,7 +2,7 @@
 layout: post
 title:  "My work values"
 date:   2019-10-06 20:00:00 +1000
-categories:
+categories: general
 ---
 
 I've worked a couple of jobs - shop assistant up to assistant manager at a hardware store over 8 years, summer jobs while studying at uni, consultant straight out of uni, then in public healthcare; first as a business analyst for 9 years and, for the past 9 years, in IT ([I blogged about my role in IT 3 years ago here]({% post_url 2017-02-01-my-day-job-2017 %})).

@@ -2,7 +2,7 @@
 layout: post
 title:  "How I use 'Inbox Zero' ('Inbox 20'?)"
 date:   2019-09-23 19:00:00 +1000
-categories:
+categories: general
 ---
 
 I’m happy to try a tool or technique to help filter out “noise”, reduce overload, and allow me to focus on the important stuff at work. Around 5 years ago I came across “Inbox Zero” which fits the above criteria. In this blog post, I'll describe how I've tailored it to suit me.

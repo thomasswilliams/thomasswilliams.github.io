@@ -2,7 +2,7 @@
 layout: post
 title:  "Nancy - Minifying HTML with WebMarkupMin"
 date:   2016-07-23 15:00:00 +1000
-categories:
+categories: development
 ---
 I've been working with Nancy <http://nancyfx.org/> for about a year, a great open-source project that I use primarily to add simple and low-overhead REST APIs to ASP.NET web forms projects.
 

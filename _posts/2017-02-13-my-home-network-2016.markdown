@@ -2,7 +2,7 @@
 layout: post
 title:  "My home network (2016)"
 date:   2017-02-12 17:40:00 +1000
-categories:
+categories: networking
 ---
 As the resident family IT "geek", I'm responsible for balancing cost, security, speed, and availability, and coming up with a great home network.
 

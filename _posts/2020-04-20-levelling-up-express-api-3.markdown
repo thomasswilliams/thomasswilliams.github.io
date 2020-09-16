@@ -2,7 +2,7 @@
 layout: post
 title:  "Levelling up an Express API, Part 3"
 date:   2020-04-20 22:00:00 +1100
-categories:
+categories: [development, expressjs]
 ---
 This is the final post in my 3-part series on “levelling up” an Express API to make it production-readier. [Part 1]({% post_url 2019-11-19-levelling-up-express-api-1 %}) touched on the basics - version control, TypeScript, linting, testing - and [part 2]({% post_url 2019-11-25-levelling-up-express-api-2 %}) added secrets & configuration, deployment considerations, and caching.
 

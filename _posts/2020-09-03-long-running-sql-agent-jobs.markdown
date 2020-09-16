@@ -2,7 +2,7 @@
 layout: post
 title:  "Notes to self: e-mailing a DBA on long-running SQL Agent jobs"
 date:   2020-09-03 17:00:00 +1000
-categories:
+categories: sqlserver
 ---
 SQL Agent is like Windows Task Scheduler inside SQL Server. From time to time, SQL Agent jobs run longer than expected and may need intervention to cancel or complete.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Notes to self: SignalR on IIS, behind a load balancer"
 date:   2017-10-11 15:00:00 +1000
-categories:
+categories: development
 ---
 My quick notes on the tasks necessary to get a SignalR app working on multiple Windows Server 2012 IIS servers, behind a load balancer (in my case, Citrix NetScaler).
 

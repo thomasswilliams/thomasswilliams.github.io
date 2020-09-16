@@ -2,7 +2,7 @@
 layout: post
 title:  "Ingress and AR gaming in the real world"
 date:   2016-07-13 06:20:00 +1000
-categories:
+categories: general
 ---
 A few years ago I played a mobile game called Ingress <https://www.ingress.com/>. Ingress was interesting as it was developed by Google (now split into a separate company called Niantic) and required GPS and data to give players points for doing in-game actions, in the real world - “augmented reality” or AR.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "RigorousSearch MediaWiki extension updated for MediaWiki 1.28"
 date:   2017-09-28 15:00:00 +1000
-categories:
+categories: development
 ---
 Recently I had a requirement at [my day job]({% post_url 2017-02-01-my-day-job-2017 %}) to improve the searchability of a locally-hosted MediaWiki wiki.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Logging with NLog in PowerShell"
 date:   2016-04-29 13:28:00 +1000
-categories:
+categories: powershell
 ---
 PowerShell has simple logging built in:
 

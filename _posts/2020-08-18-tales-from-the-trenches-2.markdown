@@ -2,7 +2,7 @@
 layout: post
 title:  "Tales from the trenches, part 2"
 date:   2020-08-18 17:00:00 +1000
-categories:
+categories: general
 ---
 Continuing from [part 1 here]({% post_url 2020-07-31-tales-from-the-trenches-1 %}), a couple more anonymised and sanitised stories from my years in IT.
 

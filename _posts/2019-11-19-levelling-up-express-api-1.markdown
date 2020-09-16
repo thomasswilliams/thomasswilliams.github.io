@@ -2,7 +2,7 @@
 layout: post
 title:  "Levelling up an Express API, Part 1"
 date:   2019-11-19 20:25:00 +1000
-categories: 
+categories: [development, expressjs]
 ---
 Over the past 18 months I've built and deployed a couple of APIs using Node, Express & TypeScript, typically serving data to a web site, sometimes with endpoints to validate and write data to a database.
 

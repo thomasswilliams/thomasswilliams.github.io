@@ -2,7 +2,7 @@
 layout: post
 title:  "PowerShell scripts for Windows uptime"
 date:   2020-07-17 12:00:00 +1000
-categories:
+categories: powershell
 ---
 There's lots of ways to find computer uptime or last restart time.
 

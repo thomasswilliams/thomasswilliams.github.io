@@ -2,7 +2,7 @@
 layout: post
 title:  "Levelling up an Express API, Part 2"
 date:   2020-03-19 23:30:00 +1100
-categories:
+categories: [development, expressjs]
 ---
 In [part 1]({% post_url 2019-11-19-levelling-up-express-api-1 %}) of this series I explained 3 techniques to "level up" a simple Express API: using TypeScript, linting and automated testing.
 

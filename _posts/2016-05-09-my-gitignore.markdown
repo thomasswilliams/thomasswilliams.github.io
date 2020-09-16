@@ -2,7 +2,7 @@
 layout: post
 title:  "My .gitignore template"
 date:   2016-05-09 19:38:00 +1000
-categories: 
+categories: development
 ---
 **TL;DR: the best resources for creating a .gitignore template are GitHub's own well-maintained repo at <https://github.com/github/gitignore>, and the generator at [gitignore.io][1].**
  

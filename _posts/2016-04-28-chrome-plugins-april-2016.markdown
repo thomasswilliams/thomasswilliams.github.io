@@ -2,7 +2,7 @@
 layout: post
 title:  "Useful Chrome browser plugins, April 2016"
 date:   2016-04-28 19:28:00 +1000
-categories: 
+categories: development
 ---
 <div markdown="1" class="note">
 **Thomas's "this post is really out of date" warning:** this post is old. Some of the recommendations here no longer apply or are now plain wrong. I'm not responsible for damage caused by your following advice from this blog, and don't offer any support or warranty.

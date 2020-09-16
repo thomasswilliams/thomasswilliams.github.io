@@ -2,7 +2,7 @@
 layout: post
 title:  "My home network upgrade to Ubiquiti UniFi"
 date:   2017-03-02 15:40:00 +1000
-categories:
+categories: networking
 ---
 [My last blog post]({% post_url 2017-02-13-my-home-network-2016 %}) described how, as at late 2016, my home network supported 5 users and 20 or so devices using a 3-year-old Apple Airport Extreme router, KoalaSafe router and older Netgear power line adapters.
 

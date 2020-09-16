@@ -2,7 +2,7 @@
 layout: post
 title:  "Create and test Oracle linked server on SQL Server 2012"
 date:   2018-08-16 12:00:00 +1000
-categories:
+categories: sqlserver
 ---
 This post is more of a "note to self" to keep track of steps to create and test an Oracle linked server on SQL Server 2012.
 

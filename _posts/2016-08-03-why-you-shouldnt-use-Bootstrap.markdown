@@ -2,7 +2,7 @@
 layout: post
 title:  "Why you shouldn't use Bootstrap"
 date:   2016-08-03 21:00:00 +1000
-categories:
+categories: development
 ---
 <div style='margin-bottom:10px' about='https://farm4.static.flickr.com/3258/2809583137_1f0e6ef808.jpg'><a href='https://www.flickr.com/photos/fotosbyflick/2809583137/' target='_blank'><img xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' rel='dct:type' src='https://farm4.static.flickr.com/3258/2809583137_1f0e6ef808.jpg' alt='deviant-204-hp by Aflickion, on Flickr' title='deviant-204-hp by Aflickion, on Flickr' border='0'/></a><br/><small>&quot;<a href='https://www.flickr.com/photos/fotosbyflick/2809583137/' target='_blank'>deviant-204-hp</a>&quot;&nbsp;(<a rel='license' href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a>)&nbsp;by&nbsp;<a href='https://www.flickr.com/people/fotosbyflick/' target='_blank'>&nbsp;</a><a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/fotosbyflick/' target='_blank'>Aflickion</a></small></div>
 

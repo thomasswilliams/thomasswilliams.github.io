@@ -2,7 +2,7 @@
 layout: post
 title:  "PowerShell script for computers created in Active Directory in last x days"
 date:   2020-09-09 17:00:00 +1000
-categories:
+categories: powershell
 ---
 I wrote the PowerShell script below to return computers created in Active Directory in the last *x* days, and identify which - if any - of those computers are running SQL Server. I've updated and adapted the script since 2017; before that, I wrote an old VBScript to do the same thing. 
 

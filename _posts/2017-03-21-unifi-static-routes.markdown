@@ -2,7 +2,7 @@
 layout: post
 title:  "Blocking domains using the 'Static Routes' feature of Unifi"
 date:   2017-03-21 18:21:00 +1000
-categories:
+categories: networking
 ---
 I recently upgraded my home network to [Ubiquiti Unifi]({% post_url 2017-03-03-home-network-unifi %}) and have been experimenting with the powerful built-in firewall.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Stylelint is FxCop/Web Essentials/JSHint for your CSS stylesheets"
 date:   2016-06-24 22:25:00 +1000
-categories:
+categories: development
 ---
 Just because code compiles doesn’t mean it’s perfect. Code analysis is the closest thing to an expert scrutinising your code; used correctly, it provides guidance for a range of issues even down to the level of "things that may not break the build” but can make future troubleshooting harder.
 

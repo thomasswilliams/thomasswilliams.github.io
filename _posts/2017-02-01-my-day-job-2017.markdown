@@ -2,7 +2,7 @@
 layout: post
 title:  "My day job (2017)"
 date:   2017-01-02 17:46:00 +1000
-categories:
+categories: general
 ---
 For the last 6 years I've worked in the IT department of a hospital, with 3 main responsibilities:
 

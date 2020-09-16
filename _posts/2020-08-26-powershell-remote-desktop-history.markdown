@@ -2,7 +2,7 @@
 layout: post
 title:  "PowerShell remote desktop history script"
 date:   2020-08-26 17:00:00 +1000
-categories:
+categories: powershell
 ---
 One of the scripts I reach for a couple of times a month is `remote-desktop-history.ps1`, which returns remote desktop history from a Windows event log on a remote computer.
 

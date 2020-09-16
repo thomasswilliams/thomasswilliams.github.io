@@ -2,7 +2,7 @@
 layout: post
 title:  "Notes to self: e-mailing a DBA if there's SQL Server database backups run during business hours"
 date:   2020-08-10 17:00:00 +1000
-categories:
+categories: [powershell, sqlserver]
 ---
 Database backups normally run out-of-hours to lessen impact to operational processes and users.
 

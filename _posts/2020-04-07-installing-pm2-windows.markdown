@@ -2,7 +2,7 @@
 layout: post
 title:  "Notes to self: installing PM2 on Windows, as a service"
 date:   2020-04-07 17:20:00 +1000
-categories:
+categories: development
 ---
 [PM2](https://pm2.keymetrics.io/) is "...a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks...".
 

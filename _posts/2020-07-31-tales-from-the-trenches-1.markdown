@@ -2,7 +2,7 @@
 layout: post
 title:  "Tales from the trenches, part 1"
 date:   2020-07-31 12:00:00 +1000
-categories:
+categories: general
 ---
 I've worked in IT for over 20 years, with great people, solving many unique problems alongside vendors, techies, and end-users.
 
