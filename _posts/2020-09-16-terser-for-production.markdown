@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Terser to minify and compress Express javascript code for deployment"
 date:   2020-09-16 17:00:00 +1000
-categories: [development, expressjs]
+categories: development expressjs
 ---
 Terser is a "JavaScript parser, mangler and compressor toolkit for ES6+". It's a popular and active [NPM package](https://www.npmjs.com/package/terser) (at the time of writing, 13 million weekly downloads and GitHub repo has 5,100 stars).
 
