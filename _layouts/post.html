@@ -5,16 +5,16 @@ layout: default
   <header>
     <h2 itemprop="name headline">{{ page.title }}</h2>
     <p>
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>&nbsp;|&nbsp;
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>&nbsp;
       <span class="categories">
+        <!-- make "categories" collection (may be 0, 1 or more categories per page) -->
         {% if post %}
           {% assign categories = post.categories %}
         {% else %}
           {% assign categories = page.categories %}
         {% endif %}
-        {% for category in categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="category">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
+        <!-- loop through collection and make a hyperlink to categories page with anchor -->
+        {% for category in categories %}<a href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="category">{{category}}</a>{% unless forloop.last %},&nbsp;{% endunless %}
         {% endfor %}
       </span>
     </p>
