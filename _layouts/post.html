@@ -6,9 +6,14 @@ layout: default
     <h2 itemprop="name headline">{{ page.title }}</h2>
     <p>
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>&nbsp;|&nbsp;
-      <span class="categories"> 
-        {% for category in post.categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+      <span class="categories">
+        {% if post %}
+          {% assign categories = post.categories %}
+        {% else %}
+          {% assign categories = page.categories %}
+        {% endif %}
+        {% for category in categories %}
+        <a href="{{site.baseurl}}/categories/#{{category|slugize}}" rel="category">{{category}}</a>
         {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       </span>
