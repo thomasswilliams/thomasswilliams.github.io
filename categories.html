@@ -3,19 +3,19 @@ layout: default
 permalink: /categories/
 title: Categories
 ---
-<!-- loop through all categories on any posts on site -->
+<!-- loop through all categories on any posts on site; order is most likely in order they appear, oldest first -->
 {% for category in site.categories %}
   <!-- create outer div -->
   <div class="category-group">
-    <!-- anchor -->
+    <!-- heading with anchor -->
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div class="category-name" id="#{{ category_name | slugize }}">{{ category_name }}</div>
+    <h2 id="#{{ category_name | slugize }}">{{ category_name }}</h2>
     <a name="{{ category_name | slugize }}"></a>
-    <!-- loop through each page in the category -->
+    <!-- loop through each page in the category, default is most recent first -->
     <ul class="posts">
       {% for post in site.categories[category_name] %}
       <li>
-        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </li>
       {% endfor %}
     </ul>
