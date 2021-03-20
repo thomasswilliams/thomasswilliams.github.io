@@ -43,8 +43,8 @@ aside > header i.fa {
   aside {
     width: 100px;
   }
-  // hide the site heading
-  aside > header h1 {
+  // hide the site heading and sub-heading
+  aside > header h1, aside > header small {
     display: none;
   }
   // make avatar image smaller
