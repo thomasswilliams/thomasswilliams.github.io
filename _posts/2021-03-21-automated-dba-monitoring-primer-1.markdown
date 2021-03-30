@@ -35,4 +35,4 @@ Starting with the "big picture" level, some questions to ask of any automated DB
 - **How to run**
 <br/>I've previously used scripts ([PowerShell]({{site.baseurl}}/categories/#powershell), VBScript), SSIS packages, SQL Agent jobs, Windows scheduled tasks, existing monitoring tools, and a combination of all the above.
 
-In part 2 I'll continue the list, moving on to alerts and analysis possibilities that automated monitoring opens up.
+In [part 2]({% post_url 2021-03-29-automated-dba-monitoring-primer-2 %}) I'll continue the list, moving on to alerts and analysis possibilities that automated monitoring opens up.
