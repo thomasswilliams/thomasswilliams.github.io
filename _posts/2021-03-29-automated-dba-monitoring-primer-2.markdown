@@ -26,4 +26,4 @@ Following on from [part 1]({% post_url 2021-03-21-automated-dba-monitoring-prime
 - **Continuous improvement**
 <br/>It's possible to be monitoring a _symptom_, rather than _cause_, of an issue, which should lead to a change in monitoring. I've also found that particular metrics may no longer be required or valid. Maybe the issue was fixed in a later version of SQL Server or Windows (for instance, the legacy need to allocate disk block sizes for SQL Server 2000).
 
-In part 3, I'll suggest a couple of metrics to monitor, how often to collect, and how long to keep the data.
+In [part 3]({% post_url 2021-04-07-automated-dba-monitoring-primer-3 %}), I'll suggest a couple of metrics to monitor, how often to collect, and how long to keep the data.
