@@ -41,7 +41,7 @@ With this in mind, here's a sample checklist to commission a server:
 - SQL Agent job owner is "sa" _(ongoing)_
 - Enable Remote Dedicated Admin Console (DAC) <https://www.brentozar.com/archive/2011/08/dedicated-admin-connection-why-want-when-need-how-tell-whos-using/>
 - Query Store enabled on all non-system databases _(ongoing)_ <https://docs.microsoft.com/en-us/sql/relational-databases/performance/query-store-usage-scenarios>
-- SQL Agent job history maximum increased if necessary _(depending on how often collected)_
+- SQL Agent job history maximum increased if necessary _(depending on how often collected by monitoring)_
 - Old SQL Agent history (job, backup, maintenance plan) cleared using regularly scheduled SQL Agent job
 - "sa" login is disabled <https://www.stigviewer.com/stig/ms_sql_server_2016_instance/2020-12-16/finding/V-214028>, <https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices>
 - Server-level SQL logins created, if needed for applications
@@ -50,12 +50,17 @@ With this in mind, here's a sample checklist to commission a server:
 - If needed, particular users or Active Directory groups have permission to start/stop SQL Server services
 - Non-production logins should not be present on production servers
 - Regular scheduled index maintenance set up using Ola Hallengren solution <https://cloud.google.com/compute/docs/instances/sql-server/best-practices#avoiding_index_fragmentation>
-- Databases should be documented in a central DBA inventory
+- Server and important configuration should be documented in a central DBA inventory
+- Databases should be documented in a central DBA inventory _(ongoing)_
 - Analyse whether "Optimise for ad-hoc workloads" and "Forced parametisation" are needed _(ongoing)_ <https://straightpathsql.com/archives/2017/01/optimize-for-ad-hoc-workloads>, <https://dba.stackexchange.com/questions/35500/why-would-i-not-use-the-sql-server-option-optimize-for-ad-hoc-workloads>, <https://github.com/stephaneserero/Sql-recommendations-for-MECM/blob/master/SQL%20recommendations%20for%20MECM%20-%20White%20Paper%20v2.6.pdf>
 - Database collation should be consistent where possible _(ongoing)_
 - Anti-virus ignores SQL Server database files, directories and processes <https://support.microsoft.com/en-us/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b>
 - Disconnected remote desktop sessions are automatically logged off after a set amount of inactivity <https://sqlsunday.com/installing-sql-server-2019>
-- model system database configured
+- _model_ system database configured
+- Confirm SPN has been automatically registered for server (may need permissions for domain service account) <https://www.mssqltips.com/sqlservertip/2955/register-a-spn-for-sql-server-authentication-with-kerberos/>
 - <code>sp_WhoIsActive</code> logging <https://thomasswilliams.github.io/sqlserver/2020/12/02/spwhoisactive.html>
 - Trace flags are analysed and enabled if necessary e.g. <https://docs.microsoft.com/en-us/sql/relational-databases/performance/best-practice-with-the-query-store>
 - Analyse if network DTC (Distributed Transaction Coordinator) access needs to be enabled
+- (optional) <code>sp_BlitzFirst</code> logging <https://www.brentozar.com/first-aid/first-responder-kit-power-bi-dashboard/>
+- (optional) Alert for new database creation (e-mail to DBA for inclusion in DBA inventory)
+- (optional) Alert for objects created in _master_ system database (e-mail to DBA for inclusion in DBA inventory)
