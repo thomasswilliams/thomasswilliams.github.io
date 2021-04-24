@@ -1,0 +1,112 @@
+---
+layout: default
+permalink: /glossary/
+title: Glossary
+---
+<p>
+  Some common terms used on this blog and my own definition, with sources and references if
+  relevant - feel free to use and expand on:
+</p>
+<ul>
+  <li><a href="#roles">Roles</a> e.g. DBA, support staff, customer</li>
+  <li><a href="#database">Server- and database-specific</a> e.g. database, server, database user</li>
+  <li><a href="#concepts">Concepts</a> e.g. production, operations, ITIL</li>
+</ul>
+
+<a name="roles" id="roles"></a>
+<h3>Roles</h3>
+<dl>
+  <dt>DBA</dt>
+  <dd>
+    Database Administrator. Manage, as well as develop for, one or more database
+    servers. May include SQL Server, MySQL, MariaDB, PostgreSQL, Oracle etc.
+    This blog mainly deals with SQL Server. A couple of great definitions of
+    what a DBA is and how they work can be found at:
+    <ol>
+      <li>
+        <a
+          href="https://www.brentozar.com/archive/2021/03/what-does-a-database-administrator-actually-do/"
+          >https://www.brentozar.com/archive/2021/03/what-does-a-database-administrator-actually-do/</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.brentozar.com/training/fundamentals-database-administration/"
+          >https://www.brentozar.com/training/fundamentals-database-administration/</a
+        >
+      </li>
+      <li>
+        <a
+          href="http://datatechnologytoday.wordpress.com/2010/07/28/what-does-a-dba-do/"
+          >http://datatechnologytoday.wordpress.com/2010/07/28/what-does-a-dba-do/</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://thomaslarock.com/2014/12/seven-tips-solving-accidental-dba-problem/"
+          >https://thomaslarock.com/2014/12/seven-tips-solving-accidental-dba-problem/</a
+        >
+      </li>
+    </ol>
+  </dd>
+  <dt>support staff</dt>
+  <dd>
+    IT teams work in many different ways. I use the term <em>support</em> to
+    loosely mean IT or related teams that may be called on to fix production
+    issues, in and out of normal hours. Support staff may include the DBA - but
+    sometimes not.
+  </dd>
+</dl>
+
+<a name="database" id="database"></a>
+<h3>Server- and database-specific</h3>
+<dl>
+  <dt>database</dt>
+  <dd>
+    A structured collection of data, organised for storage and querying. SQL
+    Server and other relational database management systems organise into
+    tables, views, stored procedures, functions, users etc.
+  </dd>
+  <dt>system database</dt>
+  <dd>
+    In SQL Server-speak, the <em>master</em>, <em>model</em>, <em>msdb</em>and
+    <em>tempdb</em> databases. Can be ignored in queries by using a clause like
+    <code>SELECT * FROM sys.databases WHERE database_id > 4</code>.
+  </dd>
+  <dt>database user</dt>
+  <dd>
+    In SQL Server, a person or group with a set of permissions relating to a
+    database. Typically linked to a server-level login, but not always. Users
+    may be members of a role like "database owner" or "read only". Users can be
+    given specific permissions on tables (even down to the column level), views,
+    stored procedures etc.
+  </dd>
+</dl>
+
+<a name="concepts" id="concepts"></a>
+<h3>Concepts</h3>
+<dl>
+  <dt>operations, operational</dt>
+  <dd>
+    Day-to-day, normal, "keep the lights on"-type work to support "the
+    business". As distinct from longer-term tactical and strategic work.
+  </dd>
+  <dt>issue</dt>
+  <dd>
+    A problem, something preventing normal work. May require analysis as to root
+    cause. May require a timely fix or workaround. It's important to consider whether
+    something's an "issue" from your customer's perspective.
+  </dd>
+  <dt>production</dt>
+  <dd>
+    A "live" environment, consisting of networks, servers, applications,
+    authentication services etc. And databases. The opposite of
+    <u>non-production</u>.
+  </dd>
+  <dt>non-production</dt>
+  <dd>
+    Covers all non-"live" environments, sometimes referred to as "test",
+    "development", "staging", "user acceptance" etc. The opposite of
+    <u>production</u>.
+  </dd>
+</dl>
