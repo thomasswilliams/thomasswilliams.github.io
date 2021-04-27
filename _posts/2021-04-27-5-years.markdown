@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "5 years"
+date:   2021-04-27 17:00:00 +1000
+categories: general
+---
+5 years ago I created the first post on this blog "Starting with Jekyll".
+
+Since then I've published 40 posts, from general topics, to developer-focused content, to more recently the ins & outs of being a DBA.
+
+Some of my personal favourites to research, write and edit were:
+
+- ["Tales from the trenches" parts 1]({% post_url 2020-07-31-tales-from-the-trenches-1 %}) & [part 2]({% post_url 2020-08-18-tales-from-the-trenches-2 %}) – coming clean about things I mucked up
+- ["My work values"]({% post_url 2019-10-06-my-values-2019 %}) – prompted by a 9 month stint as head of a small team, lots learned and a chance to put some positive practices into place
+- ["Installing PM2 on Windows"]({% post_url 2020-04-07-installing-pm2-windows %}) – a lot of the more technical posts are me battling with unfamiliar code, then emerging at the other end with a workable solution after repeat run-throughs of "I’ll just try one more thing". Due to the fast pace of change, searching the web can come up empty or incomplete. In a way, I’ve _added_ to that incompleteness by posting an answer that will eventually become out of date – but my hope is that it helps others struggling with similar challenges.
+
+Get in touch with me via Twitter (<https://twitter.com/tswilliams4>) if you have ideas or requests for content.
