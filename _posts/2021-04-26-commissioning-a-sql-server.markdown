@@ -62,5 +62,6 @@ With this in mind, here's a sample checklist to commission a server:
 - Trace flags are analysed and enabled if necessary e.g. <https://docs.microsoft.com/en-us/sql/relational-databases/performance/best-practice-with-the-query-store>
 - Analyse if network DTC (Distributed Transaction Coordinator) access needs to be enabled
 - (optional) <code>sp_BlitzFirst</code> logging <https://www.brentozar.com/first-aid/first-responder-kit-power-bi-dashboard/>
-- (optional) Alert for new database creation (e-mail to DBA for inclusion in DBA inventory)
-- (optional) Alert for objects created in _master_ system database (e-mail to DBA for inclusion in DBA inventory)
+- (optional) Automated e-mail notification for new database creation _(to DBA for inclusion in DBA inventory)_
+- (optional) Automated e-mail notification for objects created in _master_ system database _(to DBA for follow up)_
+- (optional) A DNS CNAME should be created for connections to the server
