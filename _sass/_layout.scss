@@ -74,7 +74,6 @@ main {
 @include media-query($on-laptop) {
   main {
     width: 85%; // fallback if needed
-    width: -webkit-calc(100% - 135px);
     width: calc(100% - 135px);
   }
 }
@@ -82,7 +81,7 @@ main {
 footer {
   padding: $spacing-unit 0;
   color: $grey-color-dark;
-  font-size: $small-font-size;
+  font-size: 0.8em;
 }
 
 // columns in footer
@@ -90,7 +89,6 @@ footer > div.col {
   float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: 0;
-  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
   width: calc(50% - (#{$spacing-unit} / 2));
 }
 
@@ -104,7 +102,6 @@ footer div.col ul, header ul {
 @include media-query($on-palm) {
   footer > div.col {
     float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
