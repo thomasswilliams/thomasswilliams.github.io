@@ -83,9 +83,7 @@ blockquote {
 pre,
 code {
   font-family: $fix-font-family;
-  font-size: 15px;
-  border-radius: 4px;
-  background-color: #dae7fe;
+  line-height: 1.4em;
 }
 code {
   padding: 1px 5px;
@@ -108,9 +106,9 @@ pre {
 .note {
   position: relative;
   padding: 10px 10px 0;
-  border: 1px solid #ffca28;
-  background-color: #ffd54f;
-  border-radius: 4px;
+  border: 1px solid #ffca2880;
+  background-color: #ffd54f80;
+  border-radius: 6px;
 }
 
 // clearfix
