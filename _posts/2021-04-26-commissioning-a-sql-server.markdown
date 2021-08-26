@@ -63,5 +63,5 @@ With this in mind, here's a sample checklist to commission a server:
 - Analyse if network DTC (Distributed Transaction Coordinator) access needs to be enabled
 - (optional) <code>sp_BlitzFirst</code> logging <https://www.brentozar.com/first-aid/first-responder-kit-power-bi-dashboard/>
 - (optional) Automated e-mail notification for new database creation _(to DBA for inclusion in DBA inventory)_ <https://thomasswilliams.github.io/sqlserver/2021/08/20/trigger-for-database-creation.html>
-- (optional) Automated e-mail notification for objects created in _master_ system database _(to DBA for follow up)_
+- (optional) Automated e-mail notification for objects created in _master_ system database _(to DBA for follow up)_ <https://thomasswilliams.github.io/sqlserver/2021/08/26/trigger-for-objects-in-master-database.html>
 - (optional) A DNS CNAME should be created for connections to the server
