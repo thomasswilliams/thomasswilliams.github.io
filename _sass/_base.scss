@@ -147,3 +147,11 @@ figure.highlight {
     color: #268bd2;
   }
 }
+
+// TODO SQL syntax blocks
+.language-sql .highlight {
+  // comments
+  & .c1 {
+    color: #129804;
+  }
+}
