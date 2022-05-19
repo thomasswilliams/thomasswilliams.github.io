@@ -7,6 +7,8 @@ categories: development
 
 This post is part of a short series around a demo of a browser based, interactive map using the recently-released version 1.8 of open-source [Leaflet](https://leafletjs.com/). I'm really enjoying using Leaflet (not sponsored!) and posting about the steps I took learning about mapping and Antarctica. Hopefully the posts and associated [code on GitHub](https://github.com/thomasswilliams/leaflet-antarctic-demo) might help others facing the same challenges.
 
+The map can be found at <https://thomasswilliams.github.io/leaflet-antarctic-demo/>.
+
 [Part 1 of the series]({% post_url 2022-05-02-leaflet-antarctica-demo %}) ended up with a basic zoomable and pannable map of Antarctica using tiles from Global Biodiversity Information Facility (GBIF). [Part 1a]({% post_url 2022-05-12-leaflet-antarctica-demo-1a %}) added large iceberg positions from a GeoJSON file.
 
 A common theme has been amazing open-source, start with Leaflet and its ecosystem of plugins. The [map](https://thomasswilliams.github.io/leaflet-antarctic-demo/) is hosted for free on GitHub Pages, referencing libraries using the open-source [unpkg CDN](https://unpkg.com/) - which keeps lines of code to a minimum, while providing a fully-featured experience. Most of the functionality is contained in a single `index.html` file for simplicity, and there's nothing to install.
