@@ -9,7 +9,7 @@ This post is the final of my short series on web development of an an Antarctic 
 
 The completed Leaflet map is at <https://thomasswilliams.github.io/leaflet-antarctic-demo/>, and the repository with the code (most of which is in a single `index.html` file) is at <https://github.com/thomasswilliams/leaflet-antarctic-demo>.
 
-I won't be adding anything to the map in this post. Instead, I'll cover a few things I'd think about to make the map web site "production ready". These factors don't _just_ apply to Leaflet. As you read through the list, you'll probably recognise features that some of your favorite web sites have implemented; "quality of life"-type improvements. Others will make a difference to the team that needs to support a production map:
+I won't be adding anything to the map in this post. Instead, I'll cover a few things to think about to make the map web site "production ready". These factors don't _just_ apply to Leaflet. As you read through the list, you'll probably recognise features that some of your favorite map sites or web sites in general have implemented; "quality of life"-type improvements. Others will make a difference to the team that needs to support a production map:
 
 - 1-pixel gap between tiles: could be addressed with code like <https://github.com/Leaflet/Leaflet.TileLayer.NoGap>
 - browser dark mode: for instance, <https://gist.github.com/BrendonKoz/b1df234fe3ee388b402cd8e98f7eedbd>
@@ -40,4 +40,4 @@ I won't be adding anything to the map in this post. Instead, I'll cover a few th
 - bundling scripts, minifying, obfuscating
 - loading scripts as async/defer, web workers: see recent article ["Don’t sink your website with third parties" at Smashing Magazine](https://www.smashingmagazine.com/2022/06/dont-sink-website-third-parties/)
 
-Hopefully the list (while not comprehensive) is helpful. Enjoy making maps! And keep your eye on new developments like Felt <https://felt.com/>.
+Hopefully the list (while not comprehensive) is helpful. Enjoy making maps! And keep an eye on new developments like Felt <https://felt.com/>.
