@@ -5,7 +5,7 @@ date:   2022-06-07 12:00:00 +1000
 categories: development
 ---
 
-This post is the final of my short series on web development of an an Antarctic map using [Leaflet](https://leafletjs.com/) (see [part 1 where I create the map]({% post_url 2022-05-02-leaflet-antarctica-demo %}), [part 2 which adds loading a shapefile]({% post_url 2022-05-19-leaflet-antarctica-demo-2 %}), and [part 3 which covers displaying GeoJSON points as labels]({% post_url 2022-05-19-leaflet-antarctica-demo-3 %})).
+This post is the final of my short series on web development of an an Antarctic map using [Leaflet](https://leafletjs.com/) (see [part 1 where I create the map]({% post_url 2022-05-02-leaflet-antarctica-demo %}), [part 2 which adds loading a shapefile]({% post_url 2022-05-19-leaflet-antarctica-demo-2 %}), and [part 3 which covers displaying GeoJSON points as labels]({% post_url 2022-06-02-leaflet-antarctica-demo-3 %})).
 
 The completed Leaflet map is at <https://thomasswilliams.github.io/leaflet-antarctic-demo/>, and the repository with the code (most of which is in a single `index.html` file) is at <https://github.com/thomasswilliams/leaflet-antarctic-demo>.
 
