@@ -23,6 +23,7 @@ layout: null
 					  You've clicked on my RSS feed. RSS is a fantastic solution to getting
 						notified when a site is updated. I recommend using software like
 						<a href="https://feedly.com/">Feedly</a> to read RSS feeds.
+					</p>
 					<p><code><xsl:value-of select="/atom:feed/atom:link/@href"/></code></p>
 				</header>
 				<xsl:for-each select="/atom:feed/atom:entry">
