@@ -1,0 +1,165 @@
+---
+layout: post
+title:  "E-mail blocking & blocked processes to a DBA using sp_WhoIsActive, a SQL Agent job and an alert"
+date:   2022-06-20 12:00:00 +1000
+categories: sqlserver
+---
+
+If your SQL Servers are under pressure, you want to know. Blocking and blocked processes impact end-users, and if not addressed can slow or even stop a database. In this post, I’ll outline a method I use to get timely notifications of blocking processes that you can use too.
+
+I adapted my approach from Tom Collins’s excellent – and still relevant – 2017 article “How to monitor Blocked Processes with SQL Alert and email sp_whoisActive report” at <https://www.sqlserver-dba.com/2017/01/how-to-monitor-blocked-processes-with-sql-alert-and-email-sp_whoisactive-report.html>. You could implement exactly what Tom covers in his post and come out on top. I’ve gone one small step further to send a formatted HTML e-mail with a table of blocking & blocked processes; like Tom, I generate the table using Adam Machanic’s fantastic `sp_WhoIsActive` stored procedure, which I’ve assumed is present in the _master_ system database. The complete solution is the `sp_WhoIsActive` stored procedure (which you’ll need to download and create, see <http://whoisactive.com/downloads/>), a SQL Agent job with a job step that runs `sp_WhoIsActive` and sends the e-mail, and an alert that calls the SQL Agent job when there’s blocked processes.
+
+A small note: if you use this solution you should expect false positives based on your unique environment. The script will require some tuning – for instance, the `IF` test starting line 74 is a check I added to the SQL Agent job step to exit under certain benign conditions before the e-mail is sent.
+
+Add the following as a step in a new SQL Agent job, called “DBA - notify on blocking processes”. The SQL Agent job should not be scheduled:
+
+```sql
+--send an e-mail with HTML table of blocking processes using sp_WhoIsActive
+--adapted from https://www.sqlserver-dba.com/2017/01/how-to-monitor-blocked-processes-with-sql-alert-and-email-sp_whoisactive-report.html
+--needs sp_WhoIsActive set up in the master system database (can be changed though)
+--requires Database Mail to be set up (and a default profile to send, though this
+--can be customised in the "sp_send_dbmail" call)
+--tested with SQL Server 2019
+
+--e-mail subject and (empty initially) body
+DECLARE @EmailSubject NVARCHAR(255) = N'** ' + @@SERVERNAME + N' blocking processes **',
+        @EmailBody NVARCHAR(MAX)
+
+--temp table for results of sp_WhoIsActive
+DROP TABLE IF EXISTS #temp_spWhoIsActive_365521
+
+CREATE TABLE #temp_spWhoIsActive_365521 (
+    [session_id] SMALLINT NOT NULL,
+    [sql_text] NVARCHAR(MAX) NULL,
+    [login_name] NVARCHAR(128) NOT NULL,
+    [wait_info] NVARCHAR(4000) NULL,
+    [CPU] INT NULL,
+    [tempdb_allocations] BIGINT NULL,
+    [tempdb_current] BIGINT NULL,
+    [blocking_session_id] SMALLINT NULL,
+    [blocked_session_count] SMALLINT NULL,
+    [reads] BIGINT NULL,
+    [writes] BIGINT NULL,
+    [physical_reads] BIGINT NULL,
+    [used_memory] BIGINT NOT NULL,
+    [status] VARCHAR(30) NOT NULL,
+    [open_tran_count] SMALLINT NULL,
+    [percent_complete] REAL NULL,
+    [host_name] NVARCHAR(128) NULL,
+    [database_name] NVARCHAR(128) NULL,
+    [program_name] NVARCHAR(128) NULL,
+    [start_time] DATETIME NOT NULL,
+    [login_time] DATETIME NULL,
+    [request_id] INT NULL,
+    [collection_time] DATETIME NOT NULL
+)
+
+--leave if sp_WhoIsActive is not present in master system database
+IF NOT EXISTS (SELECT * FROM master.sys.objects WHERE [name] = N'sp_WhoIsActive' AND [type] = N'P') BEGIN
+    RAISERROR(N'Stored procedure "sp_WhoIsActive" not found in the master database, leaving...', 16, 1) WITH NOWAIT
+    RETURN
+END
+
+--get results from sp_WhoIsActive into temp table, docs at http://whoisactive.com/docs/23_leader/
+BEGIN TRY
+    EXEC master..sp_WhoIsActive
+        --processes that are blocking other processes
+        @find_block_leaders = 1,
+        --blocked process count descending (process blocking most other processes,
+        --listed first)
+        @sort_order = '[blocked_session_count] DESC',
+        --don't format the output (output numbers as numbers, not text)
+        @format_output = 0,
+        --insert into passed table name
+        @destination_table = '#temp_spWhoIsActive_365521'
+END TRY
+BEGIN CATCH
+    RAISERROR(N'You may not have permission to run stored procedure "sp_WhoIsActive" in the master database, leaving...', 16, 1) WITH NOWAIT
+    RETURN
+END CATCH
+
+--if there's no blocking processes in the temp table, leave
+--could happen as in the time it took sp_WhoIsActive to run, blocking may have resolved itself
+IF 0 = (SELECT COUNT(*) FROM #temp_spWhoIsActive_365521) BEGIN
+    PRINT 'No blocking processes from "sp_WhoIsActive", leaving...'
+    RETURN
+END
+
+--if there's a single process, with no blocked count and no blocking SPIDs, leave
+--I’ve seen this generated by SSIS with a wait type of “sleep_task”, so, can ignore
+IF 1 = (SELECT COUNT(*) FROM #temp_spWhoIsActive_365521) AND 1 = (SELECT COUNT(*) FROM #temp_spWhoIsActive_365521 WHERE [blocked_session_count] = 0 AND [blocking_session_id] IS NULL) BEGIN
+    RETURN
+END
+
+--generate HTML table from temp table
+--one big string, concatenated together
+--adapted from https://database.guide/email-query-results-as-an-html-table-in-sql-server-t-sql/
+--set some basic HTML styles to make table more readable (IMHO)
+SET @EmailBody = N'<style>td { border: 1px solid #eeeeef } th { background-color: #fafafb; border: 1px solid #ececed; padding: 2px }</style>' +
+        N'<p>There are blocking processes on server &quot;' + @@SERVERNAME + N'&quot;:</p>' +
+        --open HTML table tag
+        N'<table width="100%" style="width:100%;min-width:100%;border:1px solid #ececed;border-collapse:collapse"><thead><tr>' +
+        --HTML table columns (need to match number of columns and order with what is selected
+        --from temp table below)
+        --make field names closer to Activity Monitor names
+        N'<th>SPID</th><th>Command</th><th>Login</th><th>Wait type</th><th>CPU</th><th>Blocking</th><th>Blocked count</th>' +
+        N'<th>Memory use (KB)</th><th>Task state</th><th>Open transactions</th><th>Database</th><th>Application name</th>' +
+        N'<th>Start time</th><th>Login time</th>' +
+        N'</tr></thead>' +
+        --HTML table body open tag
+        N'<tbody>' +
+       CAST((
+         --will return all results from temp table as string
+         --name each field "td" (HTML table cell)
+         --replace potential NULLs with space
+         SELECT  [td] = [session_id], [td] = [sql_text], [td] = [login_name], [td] = ISNULL([wait_info], N' '),
+                 [td] = [CPU], [td] = ISNULL(CONVERT(NVARCHAR(25), [blocking_session_id]), N' '),
+                 [td] = [blocked_session_count], [td] = [used_memory], [td] = [status], [td] = [open_tran_count],
+                 [td] = [database_name], [td] = [program_name],
+                 --format times, leave year from date to save space
+                 --d/MMM format (because, Aussie here)
+                 [td] = FORMAT([start_time], 'd/MMM h:mm:sstt'), [td] = FORMAT([login_time], 'd/MMM h:mm:sstt')
+         FROM    #temp_spWhoIsActive_365521
+         FOR     --wrap in HTML table row element
+                 XML RAW('tr'), ELEMENTS
+       ) AS NVARCHAR(MAX)) +
+        --HTML table body close, table close tag
+        N'</tbody></table>'
+
+--add info to foot of e-mail
+--could also add instruction on what to do in case of blocking e.g. launch SSMS, kills SPIDs etc.
+SET @EmailBody = @EmailBody + N'<p><em>This e-mail was sent from SQL Agent job &quot;DBA - notify on blocking processes&quot; by an automated process to &quot;dba@domain.com&quot;. Replies to this e-mail are not monitored.</em></p>'
+
+--send e-mail using Database Mail default profile
+EXEC msdb.dbo.sp_send_dbmail
+    @recipients = 'dba@domain.com ',
+    @body_format = 'HTML',
+    @body = @EmailBody,
+    @subject = @EmailSubject
+```
+
+The above script can be tested by artificially creating a blocking process and then manually running the SQL Agent job; <http://whoisactive.com/docs/14_blockers/> has a description of steps to take to create blocking.
+
+Next, create an alert to call the SQL Agent job whenever there’s blocking processes. Once again, this is adapted from Tom Collin’s article:
+
+```sql
+USE [msdb]
+GO
+EXEC sp_add_alert
+    @name = N'Run SQL Agent job on blocked processes',
+    @enabled = 1,
+    --wait 2 minutes before running the SQL Agent job again
+    @delay_between_responses = 117,
+    @include_event_description_in = 0,
+    @performance_condition = N'General Statistics|Processes blocked||>|1',
+    --run SQL Agent job "DBA - notify on blocking processes"
+    --SQL Agent job needs to exist and have the exact name specified below
+    @job_name = N'DBA - notify on blocking processes'
+GO
+```
+
+Done. Test again and make sure the alert triggers the job. Also, consider what information you can add to the e-mail to help responders fix the issue - for instance, I designed the HTML table column names to closely match SSMS Activity Monitor, as I expect responders may launch SSMS to further investigate and take action.
+
+Feel free to re-use and remix the above code. I’m a fan of `sp_WhoIsActive` and have written previously on how I use it at <https://thomasswilliams.github.io/sqlserver/2020/12/02/spwhoisactive.html> and <https://thomasswilliams.github.io/sqlserver/2021/04/07/automated-dba-monitoring-primer-3.html>.
+
+p.s. I don't recommend using the e-mail as a way to collect historical stats on blocking, there's an article at Redgate that covers Performance Monitor and/or Extended Events which would be better: <https://www.red-gate.com/hub/product-learning/sql-monitor/troubleshooting-blocking-sql-server-using-sql-monitor>
