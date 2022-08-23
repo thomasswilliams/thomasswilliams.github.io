@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Upgrading UniFi USG 3P and Cloud Key to a UDM (part 1)"
+date:   2020-08-23 12:00:00 +1000
+categories: networking
+---
+
+In this post and the next I'll be going over how I upgraded from a Ubiquiti UniFi Security Gateway (USG 3P) and original Cloud Key to a UniFi Dream Machine SE. Spoilers in advance: the upgrade didn't go as planned, and I had to start from (nearly) scratch.
+
+I appreciate good home internet which "just works". UniFi has been exactly that; seeing the family through lockdowns, proliferating devices, streaming teenagers and 5 years of only very minor technical hiccups. As it's come time to replace some aging hardware, I planned to consolidate and modernise a couple of devices with as little fuss as possible - and maybe take advantage of new capabilities.
+
+First, the old setup (I've previously posted about the [initial install in 2017]({% post_url 2017-03-03-home-network-unifi %}) and [added AP/switch in 2020]({% post_url 2020-03-19-unifi-update-2020 %})):
+
+```
+NBN modem
+ └─ USG                 }
+    ├─ 8-port switch    } UDM replacing these
+    │  ├─ Cloud Key     }
+    │  ├─ AP 1
+    │  └─ AP 2
+    └─ 8-port switch (not currently used)
+```
+
+![Cloud Key, USG and 8-port switch](/images/unifi-cloud-key-usg-and-switch-aug-2022.jpg)
+
+The USG had an IP address of `192.168.1.1`, and my overall plan was to replace this with the UDM with the same address, and restore a backup from the Cloud Key to the UDM.
+
+Before the UDM arrived, I updated the existing UniFi devices to the latest version(s); following the update, I was running UniFi Network Application version 7.2. I also took a bunch of screenshots of settings from the dashboard - just in case.
+
+Then, I downloaded backups from the dashboard to my computer:
+
+- `Support Information` > `Network Configuration`
+- `Backup` > `Download Backup` > `Settings only`
+- `Site Management` > `Export Site`
+
+Once the UDM arrived, I plugged it from the switch to the WAN port on the UDM. I figured this was supposed to work without disrupting my existing network, however it didn't and I couldn't get internet on the UDM. Wanting to continue anyway, I unplugged the USG and plugged the UDM directly into the NBN modem. Apart from my computer - which was wired to the UDM - no-one in the house had internet. The clock was ticking!
+
+Next I opened a browser window to the UDM default dashboard at `192.168.1.1` and applied necessary updates, ending up on Network Application version 7.2. At some point during the update, the IP address of the UDM changed to `192.168.0.1`, so I changed it back.
+
+I should say this part of the experience was really well done. The mobile app particularly was helpful, in addition to the UDM touch screen.
+
+So far I was about 30 minutes in to the process, and apart from no internet, all was going well.
+
+Then I attempted to upload the backup to the UDM.
