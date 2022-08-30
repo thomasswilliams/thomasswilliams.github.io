@@ -2,7 +2,7 @@
 layout: post
 title:  "Recreating my basic Antarctic Leaflet map in R (tiles, shapes, graticules, labels)"
 date:   2022-06-18 12:00:00 +1000
-categories: development R
+categories: ['development', 'R']
 ---
 
 R is a powerful "...free software environment for statistical computing and graphics". It's widely used in a variety of fields, and can even run in SQL Server.

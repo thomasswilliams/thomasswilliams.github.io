@@ -2,7 +2,7 @@
 layout: post
 title:  "Dark mode in R Markdown using prefers-color-scheme: dark"
 date:   2022-08-26 12:00:00 +1000
-categories: development R
+categories: ['development', 'R']
 ---
 
 Supporting your user's preference for dark mode in an interactive, web-based R Markdown file is straightforward. The ability is not (yet) built in to most themes. I'll show how to quickly add automatic dark mode to any theme in R Markdown.

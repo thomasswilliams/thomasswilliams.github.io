@@ -2,7 +2,7 @@
 layout: post
 title:  "Toggling dark mode in R Markdown"
 date:   2022-08-30 12:00:00 +1000
-categories: development R
+categories: ['development', 'R']
 ---
 
 In my last R post I described [how to automatically detect dark mode in a web-based R Markdown file]({% post_url 2022-08-26-r-markdown-dark-mode-1 %}). In this post, I'll add a toggle between dark and light mode, and store the user's choice in browser local storage.

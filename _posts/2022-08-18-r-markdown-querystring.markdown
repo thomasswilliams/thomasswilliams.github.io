@@ -2,7 +2,7 @@
 layout: post
 title:  "Passing a query string value to R Markdown"
 date:   2022-08-19 12:00:00 +1000
-categories: development R
+categories: ['development', 'R']
 ---
 
 Even though I'm an R rookie, I've appreciated R Markdown (R files with an `.Rmd` extension) for easy single page interactive "reports" that can combine inputs, tables, charts and more. In this post, I'll describe how I pass & read values from a query string in R Markdown, which works on a development computer with RStudio or on a Shiny server.
