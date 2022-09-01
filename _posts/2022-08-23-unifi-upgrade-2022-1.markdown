@@ -7,7 +7,7 @@ categories: networking
 
 In this post and the next I'll be going over how I upgraded from a Ubiquiti UniFi Security Gateway (USG 3P) and original Cloud Key to a UniFi Dream Machine SE. Spoilers in advance: the upgrade didn't go as planned, and I had to start from (nearly) scratch.
 
-*Update: part 2 is at <a href="{% post_url 2022-09-01-unifi-upgrade-2022-2 %}">{% post_url 2022-09-02-unifi-upgrade-2022-2 %}</a>.*
+*Update: part 2 is at <a href="{% post_url 2022-09-01-unifi-upgrade-2022-2 %}">{% post_url 2022-09-01-unifi-upgrade-2022-2 %}</a>.*
 
 I appreciate good home internet which "just works". UniFi has been exactly that; seeing the family through lockdowns, proliferating devices, streaming teenagers and 5 years of only very minor technical hiccups. As it's come time to replace some aging hardware, I planned to consolidate and modernise a couple of devices with as little fuss as possible - and maybe take advantage of new capabilities.
 
