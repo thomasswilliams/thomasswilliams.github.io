@@ -9,6 +9,8 @@ Even though I'm an R rookie, I've appreciated R Markdown (R files with an `.Rmd`
 
 The code below has been tested with a recent version of RStudio (August 2022), running R version 4.2.0. R Markdown can be output to many different formats, I'm most interested in web pages and haven't tried this code with PDF, Word or other outputs.
 
+*Update: the code for `query-string.Rmd` can be found at <https://github.com/thomasswilliams/r-markdown-snippets/blob/main/query-string.Rmd>.*
+
 As background, a query string is part of a web page address. Query strings are used to pass information to web pages, in name/value pairs separated by an equals sign - for instance, <code>user<span style="background-color:#ffcc0033">=</span>Andrew</code> or <code>country<span style="background-color:#ffcc0033">=</span>au</code>. Name/value pairs are themselves separated by ampersands, so passing multiple values looks like <code>user<span style="background-color:#ffcc0033">=</span>Andrew<span style="background-color:#ccff0055">&</span>country<span style="background-color:#ffcc0033">=</span>au</code>.
 
 Back to R Markdown: in specially-formatted header text (also known as YAML front-matter), default values for parameters can be defined like below. In addition to RStudio, the "shiny" and "rmarkdown" packages are required, and the file name - which will be important soon - is `test.Rmd`:

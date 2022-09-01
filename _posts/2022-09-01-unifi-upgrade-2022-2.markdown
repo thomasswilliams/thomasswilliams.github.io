@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Upgrading UniFi USG 3P and Cloud Key to a UDM (part 2)"
+date:   2022-09-01 12:00:00 +1000
+categories: networking
+---
+
+Last week I [replaced my UniFi Security Gateway and original Cloud Key with a UniFi Dream Machine SE]({% post_url 2022-08-23-unifi-upgrade-2022-1 %}). Prior to starting, I researched, updated everything, and diligently made backups from the old USG with the aim of restoring to the new UDM. After the restore failed twice, I opened the backup file, expecting JSON, and instead found the word: `undefined`.
+
+I'm still learning that one of life's lessons is to check my backups.
+
+At this point I was confident I could _probably_ set up my main network, IoT VLAN, and kids network from scratch to get to a working state, and finesse later. I'd taken a ton of screenshots from the old setup, and I referenced a couple of amazing resources:
+
+- **"UniFi's Advanced Wi-Fi Settings Explained" <https://evanmccann.net/blog/2021/11/unifi-advanced-wi-fi-settings>**
+- "2022 Complete UniFi Setup Guide" <https://youtu.be/kGBFkIzf6x0>
+- "UniFi - How to Migrate from Cloud Key to Cloud Key or UDM" <https://help.ui.com/hc/en-us/articles/360008976393-UniFi-How-to-Migrate-from-Cloud-Key-to-Cloud-Key-or-UDM>
+- "Upgrading to UniFi Dream Machine Pro from Cloud Key Gen 2+ and UniFi Security Gateway (USG)" <https://youtu.be/qmbvFLeCRl8>
+- "I have upgraded to UDM Pro. Step by step guide." <https://youtu.be/KtXzVn-HWUk>
+
+If you end up doing the same as I did, before creating wi-fi networks you'll need an access point. If you plug in an AP from a previous UniFi network, the dashboard will show a warning that the device is managed by another system. Interestingly, the AP can be un-assigned from the original network using the mobile app, but not using the dashboard (or, you can use the SSH password to do an "Advanced adoption", however need an SSH password already set under `System` > `Network Device SSH Authentication`).
+
+My setup is now much simpler, as the UDM is a powerful all-in-one router/switch/firewall/management device:
+
+```
+NBN modem
+ └─ UDM
+    ├─ AP 1
+    ├─ AP 2
+    └─ 8-port switch x 2 (not currently used)
+```
+
+If I did a similar upgrade again, I'd probably:
+
+- check that the backups were valid (oh, and not rename the backups, the restore looks for a file of type `.unf`)
+- do more planning, assuming I was going to start from scratch
+- take backups of the new config as I went, so I could confidently experiment and still roll back to a known, working state
+- tell my family that there's about to be at least an hour without internet
+- not do the whole thing late at night
+- maybe do a trial run? A little hard as the APs either have settings from the old network, or new...maybe add new AP at the same time as UDM?
+
+I'm fortunate to be able to upgrade my network, reducing future risk by replacing aging equipment. The new UDM is lightning fast even with extra features like Threat Management turned on. I'll finish with a couple more helpful resources:
+
+- <https://vninja.net/2019/08/12/unifi-iot-networks/>
+- <https://www.nodinrogers.com/post/2022-04-09-iot-different-vlan/>
+- <https://whitematter.tech/posts/how-to-add-vlan-segmentation-for-homekit-iot-devices-with-unifi/>
+- the UniFi Reddit community at <https://www.reddit.com/r/UNIFI/>
