@@ -9,14 +9,21 @@ title: Glossary
   relevant - feel free to use and expand on:
 </p>
 <ul>
-  <li><a href="#roles">Roles</a> e.g. DBA, support staff, customer</li>
+  <li><a href="#roles">Roles</a> e.g. DBA, IT, customer</li>
   <li><a href="#database">Server- and database-specific</a> e.g. database, server, database user</li>
-  <li><a href="#concepts">Concepts</a> e.g. production, operations, ITIL</li>
+  <li><a href="#concepts">Concepts</a> e.g. production, operations, system</li>
 </ul>
 
 <a name="roles" id="roles"></a>
 <h3>Roles</h3>
 <dl>
+  <dt>customer</dt>
+  <dd>
+    Knowing who your customers are is critical to knowing how to deliver value
+    to those customers. It also helps when establishing support priorities - you
+    may wish to spend more time documenting and writing procedures for customer-facing
+    systems and services.
+  </dd>
   <dt>DBA</dt>
   <dd>
     Database Administrator. Manage, as well as develop for, one or more database
@@ -50,6 +57,12 @@ title: Glossary
       </li>
     </ol>
   </dd>
+  <dt>IT</dt>
+  <dd>
+    IT teams are increasingly called on to not just provide technology infrastructure, but
+    to deliver and support technology <em>solutions</em> to help a business achieve its goals.
+    They do this through <u>systems</u> and <u>services</u>.
+  </dd>
   <dt>support staff</dt>
   <dd>
     IT teams work in many different ways. I use the term <em>support</em> to
@@ -65,7 +78,7 @@ title: Glossary
   <dt>database</dt>
   <dd>
     A structured collection of data, organised for storage and querying. SQL
-    Server and other <u><em>r</em></u>elational <u><em>d</em></u>ata<u><em>b</em></u>ase 
+    Server and other <u><em>r</em></u>elational <u><em>d</em></u>ata<u><em>b</em></u>ase
     <u><em>m</em></u>anagement <u><em>s</em></u>ystems (RDBMS) organise into
     tables, views, stored procedures, functions, users etc.
   </dd>
@@ -86,13 +99,13 @@ title: Glossary
   <dt>DNS CNAME</dt>
   <dd>
     A DNS CNAME is an alias or redirect to point to a server or service. It
-    can be used in place of a server or service when connecting - from any app, 
-    such as Windows Explorer, web browsers, SSMS etc. Using a DNS CNAME allows 
-    users to transparently connect to the server or service that the DNS CNAME 
-    points to, without being aware of the real location of the server or service. 
-    This adds opportunities like migrating the server or service, using cloud infrastructure, 
-    load balancing and "failing over" in case of issues. DNS CNAMEs are used every 
-    day in web browsers (<code>www.google.com</code> is a DNS CNAME, that points to 
+    can be used in place of a server or service when connecting - from any app,
+    such as Windows Explorer, web browsers, SSMS etc. Using a DNS CNAME allows
+    users to transparently connect to the server or service that the DNS CNAME
+    points to, without being aware of the real location of the server or service.
+    This adds opportunities like migrating the server or service, using cloud infrastructure,
+    load balancing and "failing over" in case of issues. DNS CNAMEs are used every
+    day in web browsers (<code>www.google.com</code> is a DNS CNAME, that points to
     the real server or service).
   </dd>
 </dl>
@@ -102,8 +115,9 @@ title: Glossary
 <dl>
   <dt>operations, operational</dt>
   <dd>
-    Day-to-day, normal, "keep the lights on"-type work to support "the
-    business". As distinct from longer-term tactical and strategic work.
+    Day-to-day, normal, "business as usual" (BAU), "keep the lights on"-type
+    work to support "the business". As distinct from longer-term tactical and
+    strategic work.
   </dd>
   <dt>issue</dt>
   <dd>
@@ -113,7 +127,7 @@ title: Glossary
   </dd>
   <dt>production</dt>
   <dd>
-    A "live" environment, consisting of networks, servers, applications,
+    A "live" environment, consisting of systems, services, networks, servers,
     authentication services etc. And databases. The opposite of
     <u>non-production</u>.
   </dd>
@@ -123,4 +137,25 @@ title: Glossary
     "development", "staging", "user acceptance" etc. The opposite of
     <u>production</u>.
   </dd>
+  <dt>system</dt>
+  <dd>
+    Software/application (which may include related hardware and other
+    infrastructure), supported by IT teams, used by customers (internal
+    and/or external). For instance, SQL Server, MS Access, Skype, Visual
+    Studio, Confluence, Zendesk are all examples of systems. Ties in with
+    ITIL "services", TOGAF (see <a href="https://www.opengroup.org/togaf">
+    https://www.opengroup.org/togaf</a>) and other concepts like Wardley
+    maps (see <a href="https://learnwardleymapping.com/">https://learnwardleymapping.com/</a>).
+  </dd>
 </dl>
+
+<!-- page-specific styles -->
+<style>
+  dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+  dd {
+    margin-left: 0.8em;
+  }
+</style>
