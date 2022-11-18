@@ -21,7 +21,7 @@ test_var <- results_from_long_running_function()
 
 Why specify the `cache` directory? Otherwise, R Markdown creates cache directories and files using the name of the R Markdown file, and chunk name. This is fine, but can make deploying to a Shiny server (see gotcha 3, below) a little harder. YMMV.
 
-There are also dedicated R packages for caching like the cleverly-named `mustashe` from <https://github.com/jhrcook/mustashe> which I previously demo'd in ["Recreating my basic Antarctic Leaflet map in R (tiles, shapes, graticules, labels)"]({% post_url 2022-06-18-leaflet-and-r.markdown %}). These can be useful when you want more control over caching:
+There are also dedicated R packages for caching like the cleverly-named `mustashe` from <https://github.com/jhrcook/mustashe> which I previously demo'd in ["Recreating my basic Antarctic Leaflet map in R (tiles, shapes, graticules, labels)"]({% post_url 2022-06-18-leaflet-and-r %}). These can be useful when you want more control over caching:
 
 ```R
 # R
