@@ -74,9 +74,6 @@ search <- "test"
   )
 )
 
-# automatically close connection after running query and leaving the current function
-on.exit(DBI::dbDisconnect(.conn), add = TRUE)
-
 # SQL statement with placeholder for parameter
 # see full docs at https://dbi.r-dbi.org/reference/sqlinterpolate
 sql <- "SELECT * FROM SomeTable WHERE SomeField LIKE ?search"
@@ -92,6 +89,9 @@ query <- DBI::sqlInterpolate(
 
 # run query on connection
 results <- DBI::dbGetQuery(.conn, query)
+
+# automatically close connection after running query and leaving the current function
+on.exit(DBI::dbDisconnect(.conn), add = TRUE)
 
 # optionally, can test if we got any results, if zero leave and return message
 # adapted from https://stackoverflow.com/a/59394360
