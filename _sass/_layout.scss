@@ -43,6 +43,10 @@ aside > header i.fa {
   aside {
     width: 100px;
   }
+  // Site Search 360 search text box
+  #searchBox {
+    max-width: 70px;
+  }
   // hide the site heading and sub-heading
   aside > header h1, aside > header small {
     display: none;
@@ -54,8 +58,8 @@ aside > header i.fa {
     // add bottom padding
     margin-bottom: 3em;
   }
-  // hide sitenames in social links
-  .username {
+  // hide sitenames in social links, feed name
+  .username, .feedname {
     display: none;
   }
 }
