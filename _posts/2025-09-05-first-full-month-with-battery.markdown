@@ -48,6 +48,6 @@ If we were going through this again, we'd:
 * reserve space for additional battery modules - where we put the battery has a low roof (see pic below), and we probably won't be able to stack more battery modules if we want to grow the system in future
 * set it up so we didn't charge the EV from the battery
 
-![SigenStor battery, 3x 8kWh modules and inverter](/images/sigen-battery-installed-july-2025.jpg)
+![SigenStor battery, 3x 8kWh modules and inverter](/images/sigen-battery-installed-july-2025.png)
 
 We initially estimated potential savings of $800-$1,000 per year with the battery - I'm hoping we get more than this, so we're insulated somewhat from higher electricity prices, and the battery pays for itself in around 8 years. The battery has adequate warranty to cover a return on investment. Time will tell - it's been a good start after only 1 month.
