@@ -43,7 +43,7 @@ A few things stand out:
 
 If we were going through this again, we'd:
 
-* _definitely_ stick with Sigenery - great so far, the "mySigen" app is fantastic for data nerds
+* _definitely_ stick with Sigenergy - great so far, the "mySigen" app is fantastic for data nerds
 * get a larger inverter - you can only draw as much as the inverter is rated (i.e. 6kWh), some nights we use 12 kWh over the span of 1-2 hours (heating!)
 * reserve space for additional battery modules - where we put the battery has a low roof (see pic below), and we probably won't be able to stack more battery modules if we want to grow the system in future
 * set it up so we didn't charge the EV from the battery
