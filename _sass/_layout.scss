@@ -13,12 +13,22 @@ aside {
   border-image: linear-gradient(to bottom, #cccccd, transparent) 1 100%;
   border-left: none;
 }
+// home link
+a.home-link {
+  cursor: default;
+  color: #bbbbbc;
+  // no hover
+  &:hover {
+    color: darken($brand-color, 25%);
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
 // header in sidebar
 // note headers are used elsewhere in the site
 aside > header {
   text-align: center;
   margin: auto;
-  cursor: pointer;
 }
 // site heading
 aside > header h1 {
@@ -79,6 +89,11 @@ main {
   padding: 20px;
 }
 
+// article body
+div[itemprop="articleBody"] {
+  font-weight: 100;
+}
+
 // when too narrow, make main content wrapper = width - aside width
 @include media-query($on-laptop) {
   main {
@@ -130,7 +145,7 @@ ul.posts h2 {
 // post headings
 h2[itemprop~="headline"] {
   font-size: 1.8em;
-  color: $brand-color;
+  color: #aaaaab;
   margin-bottom: 0;
 }
 // post dates
