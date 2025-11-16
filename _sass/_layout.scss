@@ -19,7 +19,7 @@ a.home-link {
   color: #bbbbbc;
   // no hover
   &:hover {
-    color: darken($brand-color, 25%);
+    color: #bbbbbc;
     background-color: transparent;
     text-decoration: none;
   }
@@ -89,9 +89,13 @@ main {
   padding: 20px;
 }
 
+// article
+article {
+  padding-left: 5px;
+}
 // article body
 div[itemprop="articleBody"] {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 // when too narrow, make main content wrapper = width - aside width
@@ -145,7 +149,7 @@ ul.posts h2 {
 // post headings
 h2[itemprop~="headline"] {
   font-size: 1.8em;
-  color: #aaaaab;
+  color: #333334;
   margin-bottom: 0;
 }
 // post dates
@@ -156,4 +160,8 @@ time[itemprop="datePublished"], ul.posts time {
 // categories
 span.categories {
   font-size: 0.8em;
+}
+// footnotes
+.footnotes {
+  font-size: 0.9em;
 }
