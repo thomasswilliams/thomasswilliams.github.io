@@ -18,6 +18,7 @@ aside {
 aside > header {
   text-align: center;
   margin: auto;
+  cursor: pointer;
 }
 // site heading
 aside > header h1 {
@@ -27,7 +28,7 @@ aside > header h1 {
   letter-spacing: -1px;
 }
 // links in sidebar
-aside a {
+#links a {
   display: block;
 }
 // search in sidebar
@@ -61,6 +62,10 @@ aside a {
     height: 90px;
     // add bottom padding
     margin-bottom: 3em;
+  }
+  // make links font smaller
+  #links a {
+    font-size: 0.9em;
   }
 }
 
