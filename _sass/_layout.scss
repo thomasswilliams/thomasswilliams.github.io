@@ -35,18 +35,17 @@ aside > header h1 {
   font-size: 32px;
   font-weight: 800;
   letter-spacing: -1px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
 }
 // blinking cursor after site heading
 // adapted from https://www.amitmerchant.com/simple-blinking-cursor-animation-using-css/
-aside > header h1::after {
+aside > header h1:after {
   content: "";
   width: 5px;
-  height: 20px;
-  background: #cccccd;
+  height: 28px;
+  background: #444445;
   display: inline-block;
+  margin-left: 3px;
+  margin-bottom: -1px;
   // animate
   animation: cursor-blink 1.5s steps(2) infinite;
 }
@@ -71,6 +70,7 @@ aside > header h1::after {
 // show caret on hover
 #links a:hover:before {
   opacity: 1;
+  text-decoration: none;
 }
 
 // search in sidebar
@@ -139,7 +139,7 @@ div[itemprop="articleBody"] {
 }
 // site footer, contained within main content wrapper
 footer {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit 5px 0;
   color: $grey-color-dark;
   font-size: 0.8em;
 }
