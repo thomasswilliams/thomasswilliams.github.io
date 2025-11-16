@@ -7,17 +7,10 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="author" content="{{ site.author }}">
 
-  <!-- preconnect to Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
-  <!-- FontAwesome glyphs and icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="anonymous">
-  <!-- Coloryfy colored brand icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@1.9.4/src/app/ci.min.css" crossorigin="anonymous">
-  <!-- Google fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" crossorigin="anonymous">
+  <!-- preconnect to CDN Fonts -->
+  <link rel="preconnect" href="https://fonts.cdnfonts.com/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/jetbrains-mono-2" crossorigin="anonymous">
+
   <!-- local styles -->
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
   <!-- Atom feed -->

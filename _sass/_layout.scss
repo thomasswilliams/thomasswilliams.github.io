@@ -7,7 +7,11 @@ aside {
   top: 0;
   left: 0;
   height: 100%;
-  background-color: $brand-color;
+  // gradient border at right only, from grey to transparent
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #cccccd, transparent) 1 100%;
+  border-left: none;
 }
 // header in sidebar
 // note headers are used elsewhere in the site
@@ -21,34 +25,34 @@ aside > header h1 {
   font-weight: 300;
   line-height: 48px;
   letter-spacing: -1px;
-  color: $background-color;
 }
-// links in header have different color, no hover effect
-aside > header a, aside > header a:visited, aside > header a:hover, aside > header a:active {
-  color: $background-color;
-  background-color: transparent;
-  text-decoration: none;
-}
-// social links need extra spacing
-aside > header ul li {
-  line-height: 3em;
-}
-// social Font Awesome/Coloryfy links in header
-aside > header i.fa, aside > header i.ci {
-  vertical-align: sub;
-}
+// links in sidebar
+aside > div#links {
 
-// for narrower layouts, make aside narrower
+}
+// search in sidebar
+aside > div#search {
+  margin-top: 0.8em;
+  padding: 0.8em;
+}
+// search input
+aside > input#searchBox {
+  display: block;
+  height: 1.9em;
+  margin-left: auto;
+  margin-right: auto;
+}
+// for narrower layouts, make sidebar narrower
 @include media-query($on-laptop) {
   aside {
     width: 100px;
   }
   // Site Search 360 search text box
-  #searchBox {
+  aside > input#searchBox {
     max-width: 70px;
   }
-  // hide the site heading and sub-heading
-  aside > header h1, aside > header small {
+  // hide the site heading
+  aside > header h1 {
     display: none;
   }
   // make avatar image smaller
@@ -57,10 +61,6 @@ aside > header i.fa, aside > header i.ci {
     height: 90px;
     // add bottom padding
     margin-bottom: 3em;
-  }
-  // hide sitenames in social links, feed name
-  .username, .feedname {
-    display: none;
   }
 }
 
@@ -131,9 +131,9 @@ h2[itemprop~="headline"] {
 // post dates
 time[itemprop="datePublished"], ul.posts time {
   color: $grey-color;
-  font-size: $small-font-size;
+  font-size: 0.8em;
 }
 // categories
 span.categories {
-  font-size: $small-font-size;
+  font-size: 0.8em;
 }

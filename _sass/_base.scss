@@ -8,7 +8,7 @@ dl, dd, ol, ul, figure {
 
 // basic body styling
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font-family: $base-font-family;
   color: $text-color;
   font-feature-settings: "kern" 1;
   height: 100%;
@@ -45,8 +45,8 @@ li > p {
 
 // headings
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font, $base-font-family;
-  font-weight: $base-font-weight;
+  font-family: $base-font-family;
+  font-weight: bold;
 }
 
 // links
@@ -108,6 +108,14 @@ pre {
   border: 1px solid #ffca2880;
   background-color: #ffd54f80;
   border-radius: 6px;
+}
+
+// horizontal lines
+hr {
+  height: 1px;
+  background-color: transparent;
+  border-top: 1px dashed #cccccd;
+  border-bottom: none;
 }
 
 // clearfix
