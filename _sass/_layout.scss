@@ -15,11 +15,11 @@ aside {
 }
 // home link
 a.home-link {
-  cursor: default;
-  color: #bbbbbc;
+  cursor: pointer;
+  color: #666667;
   // no hover
   &:hover {
-    color: #bbbbbc;
+    color: #666667;
     background-color: transparent;
     text-decoration: none;
   }
@@ -33,7 +33,7 @@ aside > header {
 // site heading
 aside > header h1 {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 800;
   letter-spacing: -1px;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ aside > header h1 {
 }
 // blinking cursor after site heading
 // adapted from https://www.amitmerchant.com/simple-blinking-cursor-animation-using-css/
-aside > header::after {
+aside > header h1::after {
   content: "";
   width: 5px;
   height: 20px;
@@ -61,6 +61,18 @@ aside > header::after {
 #links a {
   display: block;
 }
+// add caret before links
+#links a:before {
+  content: '➔';
+  margin-right: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+// show caret on hover
+#links a:hover:before {
+  opacity: 1;
+}
+
 // search in sidebar
 #search {
   margin-top: 0.8em;
