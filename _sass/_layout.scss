@@ -34,9 +34,29 @@ aside > header {
 aside > header h1 {
   font-size: 32px;
   font-weight: 300;
-  line-height: 48px;
   letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
+// blinking cursor after site heading
+// adapted from https://www.amitmerchant.com/simple-blinking-cursor-animation-using-css/
+aside > header::after {
+  content: "";
+  width: 5px;
+  height: 20px;
+  background: #cccccd;
+  display: inline-block;
+  // animate
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+// animation for cursor blinking in site heading
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
 // links in sidebar
 #links a {
   display: block;
