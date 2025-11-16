@@ -6,12 +6,8 @@ layout: compress
 $title-color:      #3f81a4;
 
 // variables
-$base-font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$heading-font:     Raleway;
-$fix-font-family:  "Source Code Pro", Consolas, "Courier New", monospace;
-$base-font-size:   22px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$base-font-family: "JetBrains Mono", Consolas, "Courier New", system-ui, sans-serif;
+$fix-font-family:  "JetBrains Mono", "Cascadia Code", "Source Code Pro", Menlo, Consolas, ui-monospace, monospace;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
