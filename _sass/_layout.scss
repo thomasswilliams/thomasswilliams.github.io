@@ -27,16 +27,16 @@ aside > header h1 {
   letter-spacing: -1px;
 }
 // links in sidebar
-aside > div#links > a {
-  display: inline-block;
+aside a {
+  display: block;
 }
 // search in sidebar
-aside > div#search {
+#search {
   margin-top: 0.8em;
   padding: 0.8em;
 }
 // search input
-aside > div#search > input#searchBox {
+#searchBox {
   display: block;
   height: 1.9em;
   margin-left: auto;
@@ -48,7 +48,7 @@ aside > div#search > input#searchBox {
     width: 100px;
   }
   // Site Search 360 search text box
-  aside > div#search > input#searchBox {
+  #searchBox {
     max-width: 70px;
   }
   // hide the site heading
