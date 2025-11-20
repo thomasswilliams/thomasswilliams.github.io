@@ -140,12 +140,12 @@ select {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0.5em;
+  margin: 0.4em 0.2em 0.5em;
 }
 table td, table th {
   vertical-align: top;
   border: 1px solid $grey-color-dark;
-  padding: 0.4em;
+  padding: 0.3em;
   font-size: 1em;
 }
 table thead tr th {
