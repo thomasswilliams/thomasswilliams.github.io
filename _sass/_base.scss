@@ -136,6 +136,31 @@ select {
   background-position: right 0.5em bottom 0.5em;
 }
 
+// table adapted from terminal.css https://terminalcss.xyz/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5em;
+}
+table td, table th {
+  vertical-align: top;
+  border: 1px solid $grey-color-dark;
+  padding: 0.4em;
+  font-size: 1em;
+}
+table thead tr th {
+  font-size: 1em;
+  vertical-align: middle;
+  font-weight: 700;
+}
+table tfoot tr th {
+  font-weight: 500;
+}
+table caption {
+  font-size: 1em;
+  margin: 0 0 1em;
+}
+
 // code
 pre,
 code {
