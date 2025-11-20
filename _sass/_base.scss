@@ -12,6 +12,7 @@ body {
   color: $text-color;
   font-feature-settings: "kern" 1;
   height: 100%;
+  word-wrap: break-word;
 }
 
 // set `margin-bottom` to maintain vertical rhythm
@@ -33,6 +34,7 @@ ul, ol {
   margin-left: $spacing-unit;
 }
 li {
+  margin-top: 0.3em;
   > ul,
   > ol {
     margin-bottom: 0;
@@ -76,6 +78,76 @@ blockquote {
   }
 }
 
+// inputs adapted from terminal.css https://terminalcss.xyz/
+input[type=email], input[type=text], input[type=number], input[type=password], input[type=search],
+input[type=date], input[type=time] {
+  border: 1px solid #333333;
+  width: 100%;
+  padding: 0.7em 0.5em;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+input[type=email]:active, input[type=text]:active, input[type=number]:active, input[type=password]:active,
+input[type=search]:active, input[type=date]:active, input[type=time]:active, input[type=email]:focus,
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, input[type=search]:focus,
+input[type=date]:focus, input[type=time]:focus {
+  outline:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000000;
+}
+input[type=text]:not(:placeholder-shown):invalid, input[type=email]:not(:placeholder-shown):invalid,
+input[type=password]:not(:placeholder-shown):invalid, input[type=search]:not(:placeholder-shown):invalid,
+input[type=number]:not(:placeholder-shown):invalid, input[type=date]:not(:placeholder-shown):invalid,
+input[type=time]:not(:placeholder-shown):invalid {
+  border-color: darkred;
+}
+input, textarea, select {
+  color: $text-color;
+  background-color: $background-color;
+}
+input::placeholder, textarea::placeholder {
+  color: $grey-color-light !important;
+  opacity: 1;
+}
+textarea {
+  height: auto;
+  width: 100%;
+  resize: none;
+  border: 1px solid #333333;
+  padding: 0.5em;
+  font-size: 1em;
+  appearance: none;
+  border-radius: 0;
+}
+textarea:focus {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border:1px solid #000000;
+}
+textarea:not(:placeholder-shown):invalid{
+  border-color: darkred;
+}
+select {
+  border: 1px solid #333333;
+  width: 100%;
+  padding: 0.7em 0.5em;
+  font-size: 1em;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;
+  utf8,<svg fill='currentColor' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5em bottom 0.5em
+}
+
 // code
 pre,
 code {
@@ -116,6 +188,8 @@ hr {
   background-color: transparent;
   border-top: 1px dashed #cccccd;
   border-bottom: none;
+  border-left: none;
+  border-right: none;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
 }
