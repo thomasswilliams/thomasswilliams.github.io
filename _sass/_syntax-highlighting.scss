@@ -1,10 +1,10 @@
+// highlight outer div
+.highlighter-rouge div.highlight {
+  background: #eefb;
+  border-radius: 6px;
+}
 // Syntax highlighting styles
 .highlight {
-  // apply backcolor and border to div, not contained "pre"
-  .highlighter-rouge div& {
-    background: #eefb;
-    border-radius: 6px;
-  }
   // replaced with Solarized theme colors from https://github.com/NickCraver/nickcraver.github.com/raw/master/_sass/_syntax-highlighting.scss 
   .c { color: #586e75 } // Comment
   .err { color: #93a1a1 } // Error
