@@ -32,8 +32,8 @@ aside > header {
 }
 // site heading
 aside > header h1 {
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 34px;
+  font-weight: normal;
   letter-spacing: -1px;
 }
 // blinking cursor after site heading
@@ -180,7 +180,7 @@ ul.posts h2 {
 }
 // post headings
 h2[itemprop~="headline"] {
-  font-size: 1.8em;
+  font-size: 1.85em;
   color: #333334;
   margin-bottom: 0;
 }
