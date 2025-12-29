@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "2025 recap"
+date:   2025-12-29 00:00:00 +1100
+categories: general
+---
+
+This year is nearly done; here's some of the things I'll remember 2025 for:
+
+- back into blogging: I'd been on a break from blogging since the start of 2023 due to work and other priorities, but in 2025 I published <span markdown="1" class="number">5</span> blog posts
+- a great holiday to New Zealand
+- LLMs: [in addition to on-device Ollama]({% post_url 2025-05-05-ollama-local-as-dba %}), the free version of ChatGPT came a long way in 2025 and is now a regular part of my processes of researching, code development and testing, and quick experiments
+- I bought an EV
+- [had a 24kWh home battery installed]({% post_url 2025-09-05-first-full-month-with-battery %})
+- [set up a home NAS]({% post_url 2025-11-16-unifi-home-upgrade-2025 %}): still a work in progress - as at the end of 2025, the NAS stores <span markdown="1" class="number">2.9TB</span> of Time Machine, repo backups, documents and 20+ years of family, trip and nature photos
+- also set up a mini rack and discovered Rackstuds <https://www.rackstuds.com/>
+- switched from the competent (and free) Mylio photo library software to Lightroom Classic: Mylio requires a paid version to store a catalog on a NAS, meaning the time had come to assess other options to support my photo workflow
+- edited & uploaded <span markdown="1" class="number">56</span> photos to [Flickr](https://www.flickr.com/photos/thomasswilliams)
+- continued learning more about Docker: I'd previously dabbled in containerization, and I built on this in 2025 to learn about "Dockerising" my blog and R Markdown (among other things)
+- started on [Bluesky (@thomasswilliams.bsky.social)](https://bsky.app/profile/thomasswilliams.bsky.social)
+- more Python: continued to learn Python, particularly integrating `uv` (replacing `pipenv`) and `ruff` (instead of `flake8`/`black`)
+
+In 2026 I'd like to set up a home lab server and explore self hosting. I'm thinking of:
+
+- Immich
+- Portainer
+- Traefik
+- Homey

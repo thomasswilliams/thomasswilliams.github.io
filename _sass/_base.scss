@@ -255,3 +255,10 @@ figure.highlight {
     color: #129804;
   }
 }
+
+// special number style
+.number {
+  font-family: $number-font-family;
+  // slightly larger
+  font-size: 1.4em;
+}

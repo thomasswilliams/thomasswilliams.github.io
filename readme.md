@@ -5,7 +5,7 @@ Note the `_site` directory represents generated output (the built static site) a
 
 To develop locally using Docker:
 
-* build the image:
+* build the image (make sure Docker is running):
 
 ```bash
 docker build -t jekyll-blog .
