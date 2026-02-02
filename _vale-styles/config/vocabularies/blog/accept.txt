@@ -1,0 +1,7 @@
+/* cSpell:disable */
+Unifi
+Ubiquiti
+UDM
+UNAS
+USG
+NVR

@@ -4,3 +4,13 @@ _site
 .DS_Store
 .bundle/
 vendor/
+
+# Vale
+_vale-styles/*
+!_vale-styles/config/
+
+._vale-styles/config/*
+!_vale-styles/config/vocabularies/
+
+._vale-styles/config/vocabularies/*
+!_vale-styles/config/vocabularies/blog
