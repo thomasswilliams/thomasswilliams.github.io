@@ -22,14 +22,14 @@ To ensure clients connect to SQL Server using Kerberos:
 
 ```bash
 setspn -S HOST\<Availability Group Listener>:1433 <SQL Server domain account>
-setspn -S HOST\<Availability Group Listener>.domain.name:1433 <SQL Server domain account> #FQDN
+setspn -S HOST\<Availability Group Listener>.domain.name:1433 <SQL Server domain account> # FQDN
 ```
 
 The second SPN creation command is for the Fully-Qualified Domain Name (FQDN) for the SQL Server Listener. You'll need both, and the commands should be tweaked for your environment (and port). Say the SQL Server domain account is `MYDOMAIN\SqlProd`, and your listener is `SQL-2022-LISTEN`, the commands would look like:
 
 ```bash
 setspn -S HOST\SQL-2022-LISTEN:1433 MYDOMAIN\SqlProd
-setspn -S HOST\SQL-2022-LISTEN.mydomain:1433 MYDOMAIN\SqlProd #FQDN
+setspn -S HOST\SQL-2022-LISTEN.mydomain:1433 MYDOMAIN\SqlProd # FQDN
 ```
 
 That covers clients connecting to SQL Server. But what about servers SQL Server connects to?
@@ -44,7 +44,7 @@ In my case, NTLM was being used because the backup server was referenced via a D
 
 ```bash
 setspn -S HOST\<CNAME> <host/target>
-setspn -S HOST\<CNAME>.domain.name <host/target> #FQDN
+setspn -S HOST\<CNAME>.domain.name <host/target> # FQDN
 ```
 
 For example, if my CNAME is `backup`, and the server the CNAME is pointing to is `FILESERVER1`, the commands would be:
