@@ -7,11 +7,8 @@ aside {
   top: 0;
   left: 0;
   height: 100%;
-  // gradient border at right only, from grey to transparent
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, #cccccd, transparent) 1 100%;
-  border-left: none;
+  // border at right only, same as HR
+  border-right: 1px dashed #cccccd;
 }
 // home link
 a.home-link {
@@ -41,14 +38,15 @@ aside > header h1 {
 aside > header h1:after {
   content: "";
   width: 5px;
-  height: 28px;
+  height: 25px;
   background: #444445;
   display: inline-block;
   margin-left: 3px;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   // animate
   animation: cursor-blink 1.5s steps(2) infinite;
 }
+
 // animation for cursor blinking in site heading
 @keyframes cursor-blink {
   0% {
