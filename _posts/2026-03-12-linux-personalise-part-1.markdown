@@ -96,4 +96,4 @@ After I've saved my changes to `.bashrc` in `vi`, back on the command line I run
 
 My command line now looks a little cleaner with very little effort.
 
-Personalising the Linux command line as I've demonstrated is simple and does not impact other users. In part 2, I'll go further and change the directory listing command, the default "write a file to the screen" command called `cat`, and a couple other things - stay tuned.
+Personalising the Linux command line as I've demonstrated is simple and does not impact other users. In [part 2]({% post_url 2026-03-22-linux-personalise-part-2 %}), I'll go further and change the directory listing command, the default "write a file to the screen" command called `cat`, and a couple other things - stay tuned.
