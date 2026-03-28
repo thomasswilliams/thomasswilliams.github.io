@@ -9,7 +9,7 @@ In my last post, [I customised my Linux command line with 4 dotfiles]({% post_ur
 
 I'll continue tweaking in this post by modernising two classic commands I use daily, and adding two helper packages.
 
-In part 3 I'll tackle the big one: a super-powered prompt.
+In [part 3]({% post_url 2026-03-28-linux-personalise-part-3 %}) I'll tackle the big one: a super-powered prompt.
 
 ## highlight
 
@@ -92,4 +92,4 @@ ncdu --show-itemcount --show-percent --si --color=dark /
 
 I use `ncdu` to identify space used. With `ncdu` running, browse the file system using the arrow keys and enter to move between directories; show help with "?", and finally quit with "q".
 
-That's it for part 2 - part 3, next, is where I power up my prompt.
+That's it for part 2 - [part 3]({% post_url 2026-03-28-linux-personalise-part-3 %}), next, is where I power up my prompt.
