@@ -1,0 +1,14 @@
+<script type="module">
+  /* latest version of Mermaid diagrams
+     adapted from https://stuff-things.net/2025/01/19/mermaid-diagramming-in-jekyll-in-2025/ */
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  /* initialise Mermaid */
+  mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  /* run Mermaid on the page, looking for code blocks with the class 'language-mermaid' */
+  await mermaid.run({
+    /* specify the CSS selector for Mermaid code blocks
+       by default, Mermaid looks for elements with the class 'mermaid', but thanks to Jekyll there's
+       "language-" in front when using triple-backtick code blocks */
+    querySelector: '.language-mermaid'
+  });
+</script>
